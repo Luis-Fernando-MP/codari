@@ -24,6 +24,7 @@ function ImprovedCarousel({
       else setItemsPerView(5)
     }
 
+    
     handleResize()
     window.addEventListener("resize", handleResize)
     return () => window.removeEventListener("resize", handleResize)
