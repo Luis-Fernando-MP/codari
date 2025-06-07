@@ -1,0 +1,7 @@
+{
+    "scm.compactFolders": false,
+    "explorer.compactFolders": false,
+    "notebook.compactView": false,
+    "php.format.rules.declCompactEmptyBody": true,
+    "editor.minimap.maxColumn": 100
+}

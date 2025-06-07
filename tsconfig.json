@@ -9,7 +9,7 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react"
   },
-  "extends": "astro/tsconfigs/strict",
+  // "extends": "astro/tsconfigs/strict",
   "include": [
     ".astro/types.d.ts",
     "**/*"
