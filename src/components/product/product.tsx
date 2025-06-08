@@ -231,7 +231,7 @@ export default function ProductosPage() {
       freeShipping: true,
       specs: ["Intel Core i9", "16GB RAM", "1TB SSD", "RTX 4060"],
       installments: "12x S/ 122.42 sin interés",
-      image: "/public/productos/header_ofert1.png?height=300&width=300",
+      image: "/productos/header_ofert1.png?height=300&width=300",
     },
     {
       name: "Gamer HP Intel Core i7 RTX 3050 16GB 512 GB SSD Victus 12va Gen 15.6'' 15-fa0007la W11",
@@ -246,7 +246,7 @@ export default function ProductosPage() {
       isBestSeller: true,
       specs: ["Intel Core i7", "16GB RAM", "512GB SSD", "RTX 3050"],
       installments: "18x S/ 81.61 sin interés",
-      image: "/public/productos/header_ofert2.png?height=300&width=300",
+      image: "/productos/header_ofert2.png?height=300&width=300",
     },
     {
       name: "LAPTOP GAMER ACER NITRO V15 ANV15-51-711U i7 13° GEN. 15.6 FHD IPS 144Hz 16GB 512GB RTX4050 6GB W11",
@@ -260,7 +260,7 @@ export default function ProductosPage() {
       freeShipping: true,
       specs: ["Intel Core i7", "16GB RAM", "512GB SSD", "RTX 4050"],
       installments: "24x S/ 61.21 sin interés",
-      image: "/public/productos/header_ofert3.png?height=300&width=300",
+      image: "/productos/header_ofert3.png?height=300&width=300",
     },
     {
       name: "ACER Nitro V15 ANV15-51-56GH Ci5 13420H/ 8Gb Ram/ 512GB SSD/ RTX 3050 6GB/ 15.6”FHD W.11 - CSI",
@@ -275,7 +275,7 @@ export default function ProductosPage() {
       isNew: true,
       specs: ["Intel Core i5", "8GB RAM", "512GB SSD", "RTX 3050"],
       installments: "6x S/ 244.83 sin interés",
-      image: "/public/productos/header_ofert4.png?height=300&width=300",
+      image: "/productos/header_ofert4.png?height=300&width=300",
     },
   ]
 
@@ -293,7 +293,7 @@ export default function ProductosPage() {
       isBestSeller: true,
       specs: ["Bluetooth 5.0", "RGB lighting", "40-hour battery life"],
       installments: "3x s/ 29.99 sin interés",
-      image: "/public/productos/audifonos/audifono1.png?height=200&width=200",
+      image: "/productos/audifonos/audifono1.png?height=200&width=200",
     },
     {
       name: "Audífonos Bluetooth Haylou S30 PRO ANC Hybrid Hi-Res - Blanco",
@@ -307,7 +307,7 @@ export default function ProductosPage() {
       freeShipping: true,
       specs: ["Active Noise Cancellation", "Hi-Res Audio", "Touch controls"],
       installments: "6x s/ 29.99 sin interés",
-      image: "/public/productos/audifonos/audifono2.png?height=200&width=200",
+      image: "/productos/audifonos/audifono2.png?height=200&width=200",
     },
     {
       name: "Audífonos Bluetooth Haylou S30 PRO ANC Hybrid Hi-Res - Negro",
@@ -321,7 +321,7 @@ export default function ProductosPage() {
       freeShipping: true,
       specs: ["Bluetooth 5.1", "Low latency", "Dual microphone"],
       installments: "4x s/ 32.49 sin interés",
-      image: "/public/productos/audifonos/audifono3.png?height=200&width=200",
+      image: "/productos/audifonos/audifono3.png?height=200&width=200",
     },
     {
       name: "AUDIFONOS GAMER COMBAT NEGROAZUL",
@@ -336,7 +336,7 @@ export default function ProductosPage() {
       isNew: true,
       specs: ["50mm drivers", "Noise isolation", "Adjustable headband"],
       installments: "5x s/ 29.99 sin interés",
-      image: "/public/productos/audifonos/audifono4.png?height=200&width=200",
+      image: "/productos/audifonos/audifono4.png?height=200&width=200",
     },
     {
       name: "Corsair HS80 RGB Wireless",
@@ -350,7 +350,7 @@ export default function ProductosPage() {
       freeShipping: true,
       specs: ["Dolby Atmos", "Custom-tuned 50mm drivers", "Up to 20 hours battery life"],
       installments: "6x s/ 24.99 sin interés",
-      image: "/public/productos/audifonos/audifono5.png?height=200&width=200",
+      image: "/productos/audifonos/audifono5.png?height=200&width=200",
     },
     {
       name: "Audífonos Bluetooth Haylou S30 PRO ANC Hybrid Hi-Res",
@@ -364,7 +364,7 @@ export default function ProductosPage() {
       freeShipping: true,
       specs: ["Bluetooth 5.2", "IPX5 water resistance", "Touch controls"],
       installments: "8x s/ 24.99 sin interés",
-      image: "/public/productos/audifonos/audifono6.png?height=200&width=200",
+      image: "/productos/audifonos/audifono6.png?height=200&width=200",
     },
   ]
 
@@ -382,7 +382,7 @@ export default function ProductosPage() {
       isBestSeller: true,
       specs: ["Neo Quantum Processor 4K", "Quantum HDR 32X", "120Hz refresh rate"],
       installments: "12x s/ 108.33 sin interés",
-      image: "/public/productos/televisiones/tv1.png?height=200&width=200",
+      image: "/productos/televisiones/tv1.png?height=200&width=200",
     },
     {
       name: 'LG OLED 65" C1 Series 4K Smart TV',
@@ -396,7 +396,7 @@ export default function ProductosPage() {
       freeShipping: true,
       specs: ["α9 Gen4 AI Processor", "Dolby Vision IQ", "HDMI 2.1"],
       installments: "18x s/ 99.99 sin interés",
-      image: "/public/productos/televisiones/tv2.png?height=200&width=200",
+      image: "/productos/televisiones/tv2.png?height=200&width=200",
     },
     {
       name: 'Sony OLED 55" A80J Bravia XR',
@@ -411,7 +411,7 @@ export default function ProductosPage() {
       isNew: true,
       specs: ["Cognitive Processor XR", "XR OLED Contrast", "Google TV"],
       installments: "15x s/ 93.33 sin interés",
-      image: "/public/productos/televisiones/tv3.png?height=200&width=200",
+      image: "/productos/televisiones/tv3.png?height=200&width=200",
     },
     {
       name: 'TCL QLED 50" C825 Mini LED 4K',
@@ -425,7 +425,7 @@ export default function ProductosPage() {
       freeShipping: true,
       specs: ["Quantum Dot technology", "Mini LED backlight", "120Hz VRR"],
       installments: "9x s/ 99.99 sin interés",
-      image: "/public/productos/televisiones/tv4.png?height=200&width=200",
+      image: "/productos/televisiones/tv4.png?height=200&width=200",
     },
     {
       name: 'samsung QLED 55" Q80A 4K Smart TV',
@@ -439,7 +439,7 @@ export default function ProductosPage() {
       freeShipping: true,
       specs: ["Quantum Dot Wide Color", "Full Array Local Dimming", "Dolby Vision"],
       installments: "10x s/ 99.99 sin interés",
-      image: "/public/productos/televisiones/tv5.png?height=200&width=200",
+      image: "/productos/televisiones/tv5.png?height=200&width=200",
     },
     {
       name: 'samsung QLED 65" QN85A 4K Smart TV',
@@ -453,7 +453,7 @@ export default function ProductosPage() {
       freeShipping: true,
       specs: ["P5 AI Perfect Picture", "3-sided Ambilight", "Android TV"],
       installments: "12x s/ 99.99 sin interés",
-      image: "/public/productos/televisiones/tv6.png?height=200&width=200",
+      image: "/productos/televisiones/tv6.png?height=200&width=200",
     },
   ]
 
@@ -471,7 +471,7 @@ export default function ProductosPage() {
       isBestSeller: true,
       specs: ["Reclinación 155°", "Posapies ajustable", "Masajeador incorporado"],
       installments: "12x s/ 35.83 sin interés",
-      image: "/public/productos/sillas/silla1.png?height=200&width=200",
+      image: "/productos/sillas/silla1.png?height=200&width=200",
     },
     {
       name: "Silla Gamer Reclinación 155° con Posapies y Masageador",
@@ -485,7 +485,7 @@ export default function ProductosPage() {
       freeShipping: true,
       specs: ["Reclinación 155°", "Posapies ajustable", "Diseño ergonómico"],
       installments: "10x s/ 37.99 sin interés",
-      image: "/public/productos/sillas/silla2.png?height=200&width=200",
+      image: "/productos/sillas/silla2.png?height=200&width=200",
     },
     {
       name: "Silla Gamer Kuzler Con Masajeador Lumbar Color Rosa RIK-101R",
@@ -500,7 +500,7 @@ export default function ProductosPage() {
       isNew: true,
       specs: ["Reclinación 155°", "Posapies ajustable", "Masajeador lumbar"],
       installments: "15x s/ 29.99 sin interés",
-      image: "/public/productos/sillas/silla3.png?height=200&width=200",
+      image: "/productos/sillas/silla3.png?height=200&width=200",
     },
     {
       name: "Silla Gamer Kuzler Negra con masajeador lumbar reposapiés y base metálica",
@@ -514,7 +514,7 @@ export default function ProductosPage() {
       freeShipping: true,
       specs: ["Reclinación 155°", "Posapies ajustable", "Base metálica resistente"],
       installments: "6x s/ 33.33 sin interés",
-      image: "/public/productos/sillas/silla4.png?height=200&width=200",
+      image: "/productos/sillas/silla4.png?height=200&width=200",
     },
     {
       name: "Silla Gamer Extingtion Sapp Gamuza-Cuerina Color Blanco",
@@ -528,7 +528,7 @@ export default function ProductosPage() {
       freeShipping: true,
       specs: ["Reclinación 155°", "Posapies ajustable", "Diseño moderno"],
       installments: "8x s/ 34.99 sin interés",
-      image: "/public/productos/sillas/silla5.png?height=200&width=200",
+      image: "/productos/sillas/silla5.png?height=200&width=200",
     },
     {
       name: "Silla Gamer Con Luces RGB Titan Con Masajeador Reposapiés 135° Blanco",
@@ -542,7 +542,7 @@ export default function ProductosPage() {
       freeShipping: true,
       specs: ["Reclinación 135°", "Luces RGB personalizables", "Masajeador lumbar"],
       installments: "7x s/ 28.57 sin interés",
-      image: "/public/productos/sillas/silla6.png?height=200&width=200",
+      image: "/productos/sillas/silla6.png?height=200&width=200",
     },
   ]
 
@@ -560,7 +560,7 @@ export default function ProductosPage() {
       freeShipping: true,
       timeLeft: "2h 15m",
       specs: ["M1 chip", "10.9-inch display", "12MP cameras"],
-      image: "/public/productos/ofert1.png?height=200&width=200",
+      image: "/productos/ofert1.png?height=200&width=200",
       installments: "12x S/ 208.33 sin interés",
     },
     {
@@ -575,7 +575,7 @@ export default function ProductosPage() {
       freeShipping: true,
       timeLeft: "1h 45m",
       specs: ["M2 chip", "13.6-inch display", "18-hour battery"],
-      image: "/public/productos/ofert2.png?height=200&width=200",
+      image: "/productos/ofert2.png?height=200&width=200",
       installments: "12x S/ 208.33 sin interés",
     },
     {
@@ -590,26 +590,26 @@ export default function ProductosPage() {
       freeShipping: true,
       timeLeft: "3h 30m",
       specs: ["A16 Bionic chip", "6.1-inch display", "48MP camera"],
-      image: "/public/productos/ofert3.png?height=200&width=200",
+      image: "/productos/ofert3.png?height=200&width=200",
       installments: "12x S/ 208.33 sin interés",
     },
   ]
 
   const categories = [
-    { title: "Laptops Gaming", icon: "🎮", productCount: 156, image: "/public/productos/categorias/cat1.png?height=100&width=100" },
-    { title: "Smartphones", icon: "📱", productCount: 234, image: "/public/productos/categorias/cat2.png?height=100&width=100" },
-    { title: "Audífonos", icon: "🎧", productCount: 89, image: "/public/productos/categorias/cat3.png?height=100&width=100" },
-    { title: "Televisores", icon: "📺", productCount: 67, image: "/public/productos/categorias/cat4.png?height=100&width=100" },
-    { title: "Smartwatches", icon: "⌚", productCount: 45, image: "/public/productos/categorias/cat5.png?height=100&width=100" },
-    { title: "Sillas", icon: "🔌", productCount: 178, image: "/public/productos/categorias/cat6.png?height=100&width=100" },
+    { title: "Laptops Gaming", icon: "🎮", productCount: 156, image: "/productos/categorias/cat1.png?height=100&width=100" },
+    { title: "Smartphones", icon: "📱", productCount: 234, image: "/productos/categorias/cat2.png?height=100&width=100" },
+    { title: "Audífonos", icon: "🎧", productCount: 89, image: "/productos/categorias/cat3.png?height=100&width=100" },
+    { title: "Televisores", icon: "📺", productCount: 67, image: "/productos/categorias/cat4.png?height=100&width=100" },
+    { title: "Smartwatches", icon: "⌚", productCount: 45, image: "/productos/categorias/cat5.png?height=100&width=100" },
+    { title: "Sillas", icon: "🔌", productCount: 178, image: "/productos/categorias/cat6.png?height=100&width=100" },
   ]
 
 
   const brandLogos = [
-    { name: "Logitech", src: "/public/productos/marcas/logo1.png" },
-    { name: "Samsung", src: "/public/productos/marcas/logo2.png" },
-    { name: "HyperX", src: "/public/productos/marcas/logo3.png" },
-    { name: "Asus", src: "/public/productos/marcas/logo4.png" },
+    { name: "Logitech", src: "/productos/marcas/logo1.png" },
+    { name: "Samsung", src: "/productos/marcas/logo2.png" },
+    { name: "HyperX", src: "/productos/marcas/logo3.png" },
+    { name: "Asus", src: "/productos/marcas/logo4.png" },
   ]
 
   return (
@@ -707,7 +707,7 @@ export default function ProductosPage() {
       <section className="relative py-12 sm:py-20 lg:py-70 overflow-hidden">
         {/* Imagen de fondo */}
         <img
-          src="/public/productos/fondo_header.png"
+          src="/productos/fondo_header.png"
           alt="Fondo ofertas"
           className="absolute inset-0 w-full h-full object-cover"
           loading="lazy"
@@ -744,7 +744,7 @@ export default function ProductosPage() {
                     className="rounded-2xl shadow-2xl flex items-center justify-center border-2 border-red-400 bg-white/90 hover:scale-115 hover:shadow-red-700 transition-transform duration-300 p-4"
                   >
                     <img
-                      src={`/public/productos/best_ofert${i}.png`}
+                      src={`/productos/best_ofert${i}.png`}
                       alt={`Laptop oferta ${i}`}
                       className="w-[320px] h-[192px] object-contain drop-shadow-lg transition-transform duration-300 group-hover:scale-110"
                       loading="lazy"
@@ -895,7 +895,7 @@ export default function ProductosPage() {
             {/* Imagen principal */}
             <div className="w-full lg:w-1/2 flex justify-center items-center bg-red-200 p-6 lg:p-12">
               <img
-                src="/public/productos/exclusive1.png?height=400&width=600"
+                src="/productos/exclusive1.png?height=400&width=600"
                 alt="Exclusivo Online"
                 width={400}
                 height={300}
@@ -924,7 +924,7 @@ export default function ProductosPage() {
                 {[1, 2, 3].map((i) => (
                   <div key={i} className="bg-orange-50 rounded-lg p-4 hover:shadow-md transition-shadow flex flex-col items-center">
                     <img
-                      src={`/public/productos/celphone${i}.png?height=100&width=100`}
+                      src={`/productos/celphone${i}.png?height=100&width=100`}
                       alt={`Producto ${i}`}
                       width={100}
                       height={100}
