@@ -2,10 +2,11 @@
 
 import { Search, ChevronLeft, ChevronRight, Star, Heart, ShoppingCart, Eye, Zap, TrendingUp, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { useState, useEffect } from "react"
+import { Header } from '../header'
+import { Footer } from '../footer'
 
 function ImprovedCarousel({
   title,
@@ -604,7 +605,6 @@ export default function ProductosPage() {
     { title: "Sillas", icon: "🔌", productCount: 178, image: "/productos/categorias/cat6.png?height=100&width=100" },
   ]
 
-
   const brandLogos = [
     { name: "Logitech", src: "/productos/marcas/logo1.png" },
     { name: "Samsung", src: "/productos/marcas/logo2.png" },
@@ -615,93 +615,7 @@ export default function ProductosPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="border-b border-gray-200">
-        {/* First Navigation Row */}
-        <div className="container mx-auto px-4 py-3">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <div className="w-6 h-6 bg-red-600 rounded flex items-center justify-center">
-                <span className="text-white text-xs font-bold">$</span>
-              </div>
-              <span className="text-xl font-bold">CODARI</span>
-            </div>
-
-            <nav className="hidden lg:flex space-x-8">
-              <a href="/" className="text-gray-700 hover:text-gray-900 font-medium">
-                Inicios
-              </a>
-              <a href="/productos" className="text-red-600 hover:text-red-700 font-medium">
-                Productos
-              </a>
-              <a href="#" className="text-gray-700 hover:text-gray-900 font-medium">
-                Populares
-              </a>
-              <a href="#" className="text-gray-700 hover:text-gray-900 font-medium">
-                Contáctanos
-              </a>
-            </nav>
-
-            {/* Mobile menu button */}
-            <button className="lg:hidden p-2">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-
-            <div className="flex items-center space-x-3">
-              <Button variant="ghost" size="icon" className="w-8 h-8">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    fillRule="evenodd"
-                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 01-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </Button>
-              <Button variant="ghost" size="icon" className="w-8 h-8">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z 2 0 01-2-2v-2z" />
-                </svg>
-              </Button>
-              <Button variant="ghost" size="icon" className="w-8 h-8">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    fillRule="evenodd"
-                    d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </Button>
-            </div>
-          </div>
-        </div>
-
-        {/* Second Navigation Row */}
-        <div className="bg-gray-50 border-t border-gray-200">
-          <div className="container mx-auto px-4 py-3">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-2">
-                <div className="bg-red-500 text-white px-2 py-1 rounded text-sm font-bold">-20%</div>
-                <span className="text-sm text-gray-700">Aprovecha nuestras ofertas</span>
-              </div>
-
-              <div className="flex-1 max-w-md mx-4 lg:mx-8">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-                  <Input placeholder="Buscar productos..." className="pl-10 w-full bg-white border-gray-300 text-sm" />
-                </div>
-              </div>
-
-              <div className="hidden sm:flex items-center space-x-2 text-sm">
-                <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                </svg>
-                <span className="text-gray-700 font-medium">+51-909290190</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Las mejores Ofertas del Año!! */}
       <section className="relative py-12 sm:py-20 lg:py-70 overflow-hidden">
@@ -741,7 +655,7 @@ export default function ProductosPage() {
                 {[1, 2, 3, 4].map((i) => (
                   <div
                     key={i}
-                    className="rounded-2xl shadow-2xl flex items-center justify-center border-2 border-red-400 bg-white/90 hover:scale-115 hover:shadow-red-700 transition-transform duration-300 p-4"
+                    className="rounded-2xl shadow-2xl flex items-center justify-center border-2 border-red-400 bg-white/90 hover:scale-115 hover:shadow-red-700 transition-transform duration-200 p-4"
                   >
                     <img
                       src={`/productos/best_ofert${i}.png`}
@@ -1074,85 +988,7 @@ export default function ProductosPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-br from-red-100 via-white to-orange-100 border-t border-gray-200 pt-12 pb-6 mt-12">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-            {/* Logo y descripción */}
-            <div>
-              <div className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center shadow-lg">
-                  <span className="text-white text-2xl font-bold">$</span>
-                </div>
-                <span className="text-2xl font-extrabold text-gray-900 tracking-wide">CODARI</span>
-              </div>
-              <p className="text-sm text-gray-600 mb-4">
-                Tu tienda de tecnología de confianza con los mejores productos y precios.
-              </p>
-              <div className="flex space-x-3 mt-4">
-                <a href="https://facebook.com" target="_blank" rel="noopener" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.522-4.477-10-10-10S2 6.478 2 12c0 4.991 3.657 9.128 8.438 9.877v-6.987h-2.54v-2.89h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.242 0-1.632.771-1.632 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.128 22 16.991 22 12"></path></svg>
-                </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener" className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white rounded-full p-2 transition">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.974.974 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.974.974-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.974-.974-1.246-2.242-1.308-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608C4.515 2.497 5.783 2.225 7.149 2.163 8.415 2.105 8.795 2.163 12 2.163zm0-2.163C8.741 0 8.332.012 7.052.07 5.771.128 4.633.334 3.608 1.358 2.584 2.383 2.378 3.521 2.32 4.802 2.262 6.082 2.25 6.491 2.25 12s.012 5.918.07 7.198c.058 1.281.264 2.419 1.288 3.443 1.025 1.025 2.163 1.231 3.443 1.289C8.332 23.988 8.741 24 12 24s3.668-.012 4.948-.07c1.281-.058 2.419-.264 3.443-1.289 1.025-1.025 1.231-2.163 1.289-3.443.058-1.28.07-1.689.07-7.198s-.012-5.918-.07-7.198c-.058-1.281-.264-2.419-1.289-3.443C19.367.334 18.229.128 16.948.07 15.668.012 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"></path></svg>
-                </a>
-                <a href="https://wa.me/51909290190" target="_blank" rel="noopener" className="bg-green-500 hover:bg-green-600 text-white rounded-full p-2 transition">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.19-1.62A11.93 11.93 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.19-3.48-8.52zM12 22c-1.85 0-3.63-.5-5.19-1.44l-.37-.22-3.68.96.98-3.59-.24-.37A9.93 9.93 0 0 1 2 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.47-7.14c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.5-.89-.8-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5 0 1.48 1.08 2.91 1.23 3.11.15.2 2.13 3.25 5.17 4.42.72.25 1.28.4 1.72.51.72.18 1.38.15 1.9.09.58-.07 1.77-.72 2.02-1.41.25-.7.25-1.3.17-1.41-.08-.11-.29-.18-.6-.33z"></path></svg>
-                </a>
-              </div>
-            </div>
-            {/* Links */}
-            <div>
-              <h3 className="font-semibold mb-4 text-red-600 uppercase tracking-wide">Empresa</h3>
-              <ul className="space-y-2 text-sm text-gray-700">
-                <li>
-                  <a href="#" className="hover:text-red-600 transition">Productos</a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-red-600 transition">Precios</a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-red-600 transition">Contacto</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4 text-red-600 uppercase tracking-wide">Más Info</h3>
-              <ul className="space-y-2 text-sm text-gray-700">
-                <li>
-                  <a href="#" className="hover:text-red-600 transition">Servicios</a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-red-600 transition">Soporte</a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-red-600 transition">Digital</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4 text-red-600 uppercase tracking-wide">Recursos</h3>
-              <ul className="space-y-2 text-sm text-gray-700">
-                <li>
-                  <a href="#" className="hover:text-red-600 transition">Digital</a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-red-600 transition">Ayuda</a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-red-600 transition">Soporte</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          {/* Línea y derechos */}
-          <div className="border-t border-gray-200 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500">
-            <span>© {new Date().getFullYear()} CODARI. Todos los derechos reservados.</span>
-            <span>
-              Hecho con <span className="text-red-500">♥</span> por tu equipo CODARI
-            </span>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

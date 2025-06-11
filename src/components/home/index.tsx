@@ -1,20 +1,26 @@
-'use client'
+"use client"
 
-import { Search, Shield, Truck, Globe, Headphones, BugIcon, FigmaIcon, GithubIcon, StoreIcon, PhoneIcon } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
+import { Shield, Truck, Globe, Headphones} from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { HeroSlider } from './HeroSlider'
-import { APP } from '@/constants'
+import { Header } from '../header'
+import { Footer } from '../footer'
 
 export default function HomePage() {
 	return (
 		<div className="min-h-screen bg-white">
-		
+			<Header />
 
-			{/* Hero Slider Section */}
-			<section className="relative bg-gradient-to-r from-blue-900 via-purple-900 to-pink-900 text-white overflow-hidden">
-				<HeroSlider />
+			{/* Hero Section */}
+			<section className="relative bg-gradient-to-r from-red-900 via-brown-900 to-pink-900 text-white overflow-hidden min-h-[600px] flex items-center">
+				{/* Fondo decorativo */}
+				<div className="absolute -top-32 -left-32 w-[500px] h-[500px] bg-blue-500 opacity-30 rounded-full blur-3xl z-0"></div>
+				<div className="absolute -bottom-32 -right-32 w-[400px] h-[400px] bg-green-400 opacity-20 rounded-full blur-2xl z-0"></div>
+				
+				{/* Slider */}
+				<div className="relative z-10 w-full">
+					<HeroSlider />
+				</div>
 			</section>
 
 			{/* Best Offers Section */}
@@ -29,46 +35,46 @@ export default function HomePage() {
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 						{[
 							{
-								category: 'SMARTPHONES',
-								name: 'Apple iPhone 15 Pro Smartphone',
-								price: '$999.00',
-								originalPrice: '$1,099.00',
-								image: '/placeholder.svg?height=300&width=300'
-							},
-							{
-								category: 'AURICULARES',
-								name: 'Sony WH-1000XM4 Noise Cancelling',
-								price: '$279.00',
-								originalPrice: '$349.00',
-								image: '/placeholder.svg?height=300&width=300'
-							},
-							{
-								category: 'SMARTWATCH',
-								name: 'Samsung Galaxy Watch4 Classic 46mm',
-								price: '$299.00',
-								originalPrice: '$399.00',
-								image: '/placeholder.svg?height=300&width=300'
+								category: 'LAPTOPS',
+								name: 'ASUS ROG Zephyrus G14 14"',
+								price: 'S/ 5000',
+								originalPrice: 'S/ 5,099',
+								image: '/productos/header_ofert1.png?height=300&width=300'
 							},
 							{
 								category: 'LAPTOPS',
-								name: 'Lenovo Legion 5 Pro Gaming 16',
-								price: '$799.00',
-								originalPrice: '$999.00',
-								image: '/placeholder.svg?height=300&width=300'
+								name: 'VICTUS Gaming 15.6 FHD',
+								price: 'S/ 5400',
+								originalPrice: 'S/ 5700',
+								image: '/productos/header_ofert2.png?height=300&width=300'
 							},
 							{
-								category: 'CÁMARA DE ACCIÓN',
-								name: 'GoPro HERO11 Black 5.3K',
-								price: '$399.00',
-								originalPrice: '$499.00',
-								image: '/placeholder.svg?height=300&width=300'
+								category: 'LAPTOPS',
+								name: 'NITRO 5 Gaming 15.6 FHD',
+								price: 'S/ 4000',
+								originalPrice: 'S/ 4,500',
+								image: '/productos/header_ofert3.png?height=300&width=300'
 							},
 							{
-								category: 'CORSAIR',
-								name: 'Corsair ST100 RGB Premium Digital',
-								price: '$79.00',
-								originalPrice: '$99.00',
-								image: '/placeholder.svg?height=300&width=300'
+								category: 'PC GAMING',
+								name: 'PC Gamer AMD Ryzen 5 5600X',
+								price: 'S/ 3200',
+								originalPrice: 'S/ 4,000',
+								image: '/productos/headofert1.png?height=300&width=300'
+							},
+							{
+								category: 'SILLAS GAMING', 
+								name: 'Silla Gaming DXRacer Racing Series',
+								price: 'S/ 399',
+								originalPrice: 'S/ 499',
+								image: '/productos/sillas/silla3.png?height=300&width=300'
+							},
+							{
+								category: 'SILLAS GAMING',
+								name: 'Silla Gaming DXRacer Formula Series',
+								price: 'S/ 79',
+								originalPrice: 'S/ 99',
+								image: '/productos/sillas/silla1.png?height=300&width=300'
 							}
 						].map((product, index) => (
 							<Card key={index} className="group hover:shadow-lg transition-shadow">
@@ -96,7 +102,7 @@ export default function HomePage() {
 			</section>
 
 			{/* Technology Section */}
-			<section className="py-16 bg-gradient-to-r from-gray-900 to-black text-white">
+			<section className="py-16 bg-gradient-to-r from-red-900 to-red-600 text-white">
 				<div className="container mx-auto px-4 text-center">
 					<h2 className="text-3xl md:text-4xl font-bold mb-4">LA TECNOLOGÍA TRANSFORMA VIDAS</h2>
 					<p className="text-xl mb-8">
@@ -109,36 +115,66 @@ export default function HomePage() {
 
 			{/* Recommended Section */}
 			<section className="py-16">
-				<div className="container mx-auto px-4">
-					<h2 className="text-3xl font-bold mb-8">RECOMENDADO PARA TI</h2>
-					<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-						{[
-							{ name: 'Smartphone Xiaomi Redmi Note 12 Pro', price: '$299.00', category: 'SMARTPHONES' },
-							{ name: 'Carga Inalámbrica Belkin BoostCharge', price: '$199.00', category: 'AURICULARES' },
-							{ name: 'Laptop HP Victus Gaming 15.6', price: '$899.00', category: 'TABLETS' },
-							{ name: 'Juego de 4K Resident Evil 4', price: '$1,099.00', category: 'JUEGOS DE 4K' },
-							{ name: 'Mochila Targus CityGear', price: '$49.00', category: 'MOCHILAS' },
-							{ name: 'Mochila Targus CityGear', price: '$39.00', category: 'MOCHILAS' }
-						].map((item, index) => (
-							<Card key={index} className="group hover:shadow-lg transition-shadow">
-								<CardContent className="p-4">
-									<div className="aspect-square mb-3 bg-gray-100 rounded-lg">
-										<img
-											src="/placeholder.svg?height=150&width=150"
-											alt={item.name}
-											width={150}
-											height={150}
-											className="w-full h-full object-cover rounded-lg"
-										/>
-									</div>
-									<div className="text-xs text-gray-500 mb-1">{item.category}</div>
-									<h3 className="text-sm font-medium mb-2 line-clamp-2">{item.name}</h3>
-									<div className="text-lg font-bold">{item.price}</div>
-								</CardContent>
-							</Card>
-						))}
-					</div>
+			<div className="container mx-auto px-4">
+				<h2 className="text-3xl font-bold mb-8">RECOMENDADO PARA TI</h2>
+				<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+				{[
+					{
+					name: 'Smartphone Xiaomi Redmi Note 12 Pro',
+					price: '$299.00',
+					category: 'SMARTPHONES',
+					image: '/productos/audifonos/audifono1.png?height=150&width=150'
+					},
+					{
+					name: 'Carga Inalámbrica Belkin BoostCharge',
+					price: '$199.00',
+					category: 'AURICULARES',
+					image: '/productos/audifonos/audifono2.png?height=150&width=150'
+					},
+					{
+					name: 'Laptop HP Victus Gaming 15.6',
+					price: '$899.00',
+					category: 'TABLETS',
+					image: '/productos/audifonos/audifono3.png?height=150&width=150'
+					},
+					{
+					name: 'Juego de 4K Resident Evil 4',
+					price: '$1,099.00',
+					category: 'JUEGOS DE 4K',
+					image: '/productos/audifonos/audifono4.png?height=150&width=150'
+					},
+					{
+					name: 'Mochila Targus CityGear',
+					price: '$49.00',
+					category: 'MOCHILAS',
+					image: '/productos/audifonos/audifono5.png?height=150&width=150'
+					},
+					{
+					name: 'Mochila Targus CityGear',
+					price: '$39.00',
+					category: 'MOCHILAS',
+					image: '/productos/audifonos/audifono6.png?height=150&width=150'
+					}
+				].map((item, index) => (
+					<Card key={index} className="group hover:shadow-lg transition-shadow">
+					<CardContent className="p-4 ">
+						<div className="aspect-square mb-3 bg-gray-100 rounded-lg">
+						<img
+							src={item.image}
+							alt={item.name}
+							width={150}
+							height={150}
+							className="w-full h-full object-cover rounded-lg"
+						/>
+						</div>
+						<div className="text-xs text-gray-500 mb-1">{item.category}</div>
+						<h3 className="text-sm font-medium mb-2 line-clamp-2">{item.name}</h3>
+						<div className="text-lg font-bold">{item.price}</div>
+					</CardContent>
+					</Card>
+				))}
 				</div>
+			</div>
 			</section>
 
 			{/* About Section */}
@@ -147,7 +183,7 @@ export default function HomePage() {
 					<div className="max-w-4xl mx-auto text-center">
 						<div className="mb-8">
 							<img
-								src="/placeholder.svg?height=200&width=200"
+								src="/public/inicio/team.png?height=200&width=200"
 								alt="Team"
 								width={200}
 								height={200}
@@ -235,80 +271,7 @@ export default function HomePage() {
 			</section>
 
 			{/* Footer */}
-			<footer className="bg-white border-t border-gray-200 py-12">
-				<div className="container mx-auto px-4">
-					<div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-						<div>
-							<div className="flex items-center space-x-2 mb-4">
-								<div className="w-8 h-8 bg-red-600 rounded flex items-center justify-center">
-									<span className="text-white text-xs font-bold">$</span>
-								</div>
-								<span className="text-xl font-bold text-gray-900">CODARI</span>
-							</div>
-						</div>
-						<div>
-							<h3 className="font-semibold mb-4 text-gray-900">Empresa</h3>
-							<ul className="space-y-2 text-sm text-gray-600">
-								<li>
-									<a href="#" className="hover:text-gray-900">
-										Productos
-									</a>
-								</li>
-								<li>
-									<a href="#" className="hover:text-gray-900">
-										Precios
-									</a>
-								</li>
-								<li>
-									<a href="#" className="hover:text-gray-900">
-										Contacto
-									</a>
-								</li>
-							</ul>
-						</div>
-						<div>
-							<h3 className="font-semibold mb-4 text-gray-900">Más Info</h3>
-							<ul className="space-y-2 text-sm text-gray-600">
-								<li>
-									<a href="#" className="hover:text-gray-900">
-										Servicios
-									</a>
-								</li>
-								<li>
-									<a href="#" className="hover:text-gray-900">
-										Soporte
-									</a>
-								</li>
-								<li>
-									<a href="#" className="hover:text-gray-900">
-										Digital
-									</a>
-								</li>
-							</ul>
-						</div>
-						<div>
-							<h3 className="font-semibold mb-4 text-gray-900">Recursos</h3>
-							<ul className="space-y-2 text-sm text-gray-600">
-								<li>
-									<a href="#" className="hover:text-gray-900">
-										Digital
-									</a>
-								</li>
-								<li>
-									<a href="#" className="hover:text-gray-900">
-										Ayuda
-									</a>
-								</li>
-								<li>
-									<a href="#" className="hover:text-gray-900">
-										Soporte
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</footer>
+			<Footer/>
 		</div>
 	)
 }
