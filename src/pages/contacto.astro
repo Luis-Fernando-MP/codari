@@ -20,48 +20,45 @@ import ContactForm from '@/components/Contact/ContactForm'
 				<div class="grid md:grid-cols-2 gap-8 items-center">
 					<div class="space-y-6">
 						<div class="flex items-center space-x-4">
-							<Badge className="bg-orange-500 hover:text-white hover:bg-black font-bold px-3 py-1">Contáctanos</Badge>
-							<span class="text-lg">Estamos aquí para ayudarte</span>
+							<Badge className="bg-background text-foreground font-bold px-3 py-1">Contáctenos</Badge>
+							<span>Estamos aquí para ayudarte</span>
 						</div>
-						<h1 class="text-4xl md:text-5xl font-bold">
+						<h1 class="text-4xl md:text-5xl font-bold flex flex-col gap-3">
 							¿Necesitas ayuda?
-							<br />
 							<span class="text-yellow-300">¡Hablemos!</span>
 						</h1>
-						<p class="text-xl">Nuestro equipo de expertos está listo para resolver todas tus dudas sobre tecnología.</p>
+						<p>Nuestro equipo de expertos está listo para resolver<br /> todas tus dudas sobre tecnología.</p>
 						<div class="flex items-center space-x-4">
-							<span class="text-lg">Llámanos ahora:</span>
-							<div class="bg-green-500 text-black hover:bg-orange-400 hover:text-black px-4 py-2 rounded-full font-bold">
-								📞 +51-909290190
-							</div>
+							<span class="font-bold">Llámanos ahora:</span>
+							<div class="bg-background text-foreground cursor-pointer px-4 py-2 rounded-[10px] font-bold">📞 +51-909290190</div>
 						</div>
 					</div>
 					<div class="grid grid-cols-2 gap-4">
 						<div
-							class="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center shadow-md hover:shadow-2xl transition-all duration-300 hover:bg-black hover:text-white"
+							class="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center shadow-md hover:shadow-2xl transition-all duration-300 hover:bg-primary hover:text-white"
 						>
-							<MessageCircle className="w-12 h-12 mx-auto mb-3" />
+							<MessageCircle className="w-8 h-8 mx-auto mb-3" />
 							<h3 class="font-bold">Chat en Vivo</h3>
 							<p class="text-sm">Respuesta inmediata</p>
 						</div>
 						<div
-							class="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center shadow-md hover:shadow-2xl transition-all duration-300 hover:bg-black hover:text-white"
+							class="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center shadow-md hover:shadow-2xl transition-all duration-300 hover:bg-primary hover:text-white"
 						>
-							<Mail className="w-12 h-12 mx-auto mb-3" />
+							<Mail className="w-8 h-8 mx-auto mb-3" />
 							<h3 class="font-bold">Email</h3>
 							<p class="text-sm">24/7 disponible</p>
 						</div>
 						<div
-							class="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center shadow-md hover:shadow-2xl transition-all duration-300 hover:bg-black hover:text-white"
+							class="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center shadow-md hover:shadow-2xl transition-all duration-300 hover:bg-primary hover:text-white"
 						>
-							<Phone className="w-12 h-12 mx-auto mb-3" />
+							<Phone className="w-8 h-8 mx-auto mb-3" />
 							<h3 class="font-bold">Teléfono</h3>
 							<p class="text-sm">Lun - Vie 9AM-6PM</p>
 						</div>
 						<div
-							class="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center shadow-md hover:shadow-2xl transition-all duration-300 hover:bg-black hover:text-white"
+							class="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center shadow-md hover:shadow-2xl transition-all duration-300 hover:bg-primary hover:text-white"
 						>
-							<MapPin className="w-12 h-12 mx-auto mb-3" />
+							<MapPin className="w-8 h-8 mx-auto mb-3" />
 							<h3 class="font-bold">Ubicación</h3>
 							<p class="text-sm">Lima, Perú</p>
 						</div>
@@ -86,16 +83,16 @@ import ContactForm from '@/components/Contact/ContactForm'
 							<div
 								class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-red-200 transition-colors"
 							>
-								<Phone className="w-8 h-8 text-red-600" />
+								<Phone className="w-8 h-8 text-primary" />
 							</div>
 							<h3 class="text-xl font-bold mb-3">Teléfono</h3>
 							<p class="text-gray-600 mb-4">Llámanos directamente para atención inmediata</p>
 							<div class="space-y-2">
-								<p class="font-semibold text-red-600">+51-909290190</p>
+								<p class="font-semibold text-primary">+51-909290190</p>
 								<p class="text-sm text-gray-500">Lun - Vie: 9:00 AM - 6:00 PM</p>
 								<p class="text-sm text-gray-500">Sáb: 9:00 AM - 2:00 PM</p>
 							</div>
-							<Button className="mt-4 bg-red-600 hover:bg-red-700 w-full">
+							<Button className="mt-4 bg-primary hover:bg-red-700 w-full">
 								<Phone className="w-4 h-4 mr-2" />
 								Llamar Ahora
 							</Button>
@@ -227,7 +224,7 @@ import ContactForm from '@/components/Contact/ContactForm'
 									Para consultas urgentes o problemas técnicos inmediatos, contáctanos directamente:
 								</p>
 								<div class="space-y-2">
-									<Button className="bg-red-600 hover:bg-red-700 w-full">
+									<Button className="bg-primary hover:bg-red-700 w-full">
 										<Phone className="w-4 h-4 mr-2" />
 										Llamar: +51-909290190
 									</Button>
@@ -250,7 +247,7 @@ import ContactForm from '@/components/Contact/ContactForm'
 		<section class="py-16 bg-gray-50">
 			<div class="container mx-auto px-4">
 				<div class="text-center mb-12">
-					<h2 class="text-3xl text-red-600 font-bold mb-4">Preguntas Frecuentes</h2>
+					<h2 class="text-3xl text-primary font-bold mb-4">Preguntas Frecuentes</h2>
 					<p class="text-gray-600 max-w-2xl mx-auto">
 						Encuentra respuestas rápidas a las consultas más comunes de nuestros clientes.
 					</p>
@@ -301,7 +298,7 @@ import ContactForm from '@/components/Contact/ContactForm'
 		<section class="py-16">
 			<div class="container mx-auto px-4">
 				<div class="text-center mb-12">
-					<h2 class="text-3xl text-red-600 font-bold mb-4">Nuestra Ubicación</h2>
+					<h2 class="text-3xl text-primary font-bold mb-4">Nuestra Ubicación</h2>
 					<p class="text-gray-600">Visítanos en nuestra tienda física en Lima</p>
 				</div>
 
@@ -310,7 +307,7 @@ import ContactForm from '@/components/Contact/ContactForm'
 						<div class="bg-gray-200 rounded-lg h-96 overflow-hidden flex items-center justify-center">
 							<iframe
 								title="Ubicación CODARI"
-								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.0000000000005!2d-77.03300000000002!3d-12.100000000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8c000000001%3A0x0000000000000001!2sAv.%20Tecnolog%C3%ADa%20123%2C%20San%20Isidro%2C%20Lima!5e0!3m2!1ses-419!2spe!4v1710000000000!5m2!1ses-419!2spe"
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3899.799664356013!2d-76.9714698!3d-12.1940306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b9a26836ac01%3A0x4fd233c0d43ca479!2sUniversidad%20Tecnol%C3%B3gica%20del%20Per%C3%BA%20UTP!5e0!3m2!1ses-419!2spe!4v1749736808700!5m2!1ses-419!2spe"
 								width="100%"
 								height="100%"
 								style={{ border: 0 }}
@@ -321,7 +318,7 @@ import ContactForm from '@/components/Contact/ContactForm'
 
 					<div class="space-y-6">
 						<div>
-							<h3 class="text-2xl text-red-600 font-bold mb-4">Información de la tienda</h3>
+							<h3 class="text-2xl text-primary font-bold mb-4">Información de la tienda</h3>
 							<div class="space-y-4">
 								<div class="flex items-start space-x-3">
 									<MapPin className="w-5 h-5 text-orange-600 mt-1" />
@@ -353,7 +350,7 @@ import ContactForm from '@/components/Contact/ContactForm'
 							</div>
 						</div>
 
-						<div class="bg-red-50 border border-red-600 rounded-lg p-6">
+						<div class="bg-red-50 border border-primary rounded-lg p-6">
 							<h4 class="font-bold text-lg mb-3">¿Cómo llegar?</h4>
 							<ul class="text-gray-600 space-y-2">
 								<li>• Estación del Metropolitano: Javier Prado (5 min caminando)</li>
