@@ -38,7 +38,7 @@ export function Header() {
 						</svg>
 					</button>
 
-					<div className="flex items-center space-x-3">
+					<div className="hidden sm:flex items-center space-x-3">
 						<Button variant="ghost" size="icon" className="w-8 h-8">
 							<BugIcon />
 						</Button>
@@ -58,11 +58,11 @@ export function Header() {
 					<a href="/" className="block text-gray-700 hover:text-primary font-medium">
 						Inicio
 					</a>
-					<a href="/product" className="block text-gray-700 hover:text-primary font-medium">
+					<a href="/productos" className="block text-gray-700 hover:text-primary font-medium">
 						Productos
 					</a>
-					<a href="/Contact" className="block text-gray-600 hover:text-primary font-medium">
-						Contáctanos
+					<a href="/contacto" className="block text-gray-600 hover:text-primary font-medium">
+						Contáctenos
 					</a>
 				</nav>
 			)}
@@ -70,20 +70,20 @@ export function Header() {
 			{/* Second Navigation Row */}
 			<div className="bg-gray-50 border-t border-gray-200">
 				<div className="container mx-auto px-4 py-3">
-					<div className="flex items-center justify-between">
-						<div className="flex items-center space-x-2">
+					<div className="flex flex-col sm:flex-row items-center justify-between">
+						<div className="flex items-center space-x-2 mb-2 sm:mb-0">
 							<div className="bg-primary text-white px-2 py-1 rounded text-sm font-bold">-20%</div>
 							<span className="text-sm text-gray-700">Aprovecha nuestras ofertas</span>
 						</div>
 
-						<div className="flex-1 max-w-md mx-4 lg:mx-8">
+						<div className="w-full sm:flex-1 sm:max-w-md sm:mx-4 lg:mx-8 mb-2 sm:mb-0">
 							<div className="relative">
 								<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
 								<Input placeholder="Buscar" className="pl-10 w-full bg-white border-gray-300" />
 							</div>
 						</div>
 
-						<div className="hidden sm:flex items-center space-x-2 text-sm">
+						<div className="flex items-center space-x-2 text-sm">
 							<PhoneIcon />
 							<span className="text-gray-700 font-medium">+51-909290190</span>
 						</div>
