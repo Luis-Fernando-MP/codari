@@ -1,0 +1,60 @@
+---
+// Importa los componentes necesarios
+import { Badge } from '@/components/ui/badge'
+import { PhoneIcon } from 'lucide-react'
+---
+
+<section class="relative py-12 sm:py-20 lg:py-32 overflow-hidden h-[85vh] grid content-center">
+	<img
+		src="https://images.unsplash.com/photo-1520155346-36773ab29479?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+		alt="Fondo ofertas"
+		class="absolute inset-0 w-full h-full object-cover brightness-30"
+		loading="lazy"
+	/>
+	<!-- Contenido encima -->
+	<div class="relative z-2">
+		<div class="container mx-auto px-4">
+			<div class="grid md:grid-cols-2 gap-12 items-center">
+				<!-- Texto principal -->
+				<div class="text-white space-y-6 text-center md:text-left">
+					<div class="flex items-center justify-center md:justify-start space-x-4">
+						<Badge className="bg-primary text-primary-foreground font-bold px-3 py-1 rounded-[5px]">Hasta 20%</Badge>
+						<span class="text-lg font-semibold">Descuento</span>
+					</div>
+					<h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight drop-shadow-lg">
+						Las mejores Ofertas
+						<br />
+						En <span class="text-primary">Laptops</span>
+					</h1>
+					<p class="text-lg font-medium max-w-lg">
+						Aprovecha nuestras increíbles ofertas en laptops de última generación. Calidad y rendimiento al mejor precio.
+					</p>
+					<div class="flex flex-col sm:flex-row items-center justify-center md:justify-start space-y-2 sm:space-y-0 sm:space-x-4">
+						<span class="text-lg font-medium">Cotiza Ahora!</span>
+						<div class="bg-background text-foreground p-2 rounded-[10px] flex justify-center gap-2.5">
+							<PhoneIcon size={20} /> 909290190
+						</div>
+					</div>
+				</div>
+				<!-- Imágenes de productos destacados -->
+				<div class="hidden md:grid grid-cols-2 gap-6">
+					{
+						[1, 2, 3, 4].map((i) => (
+							<a
+								href={`/productos/${i}`}
+								class="rounded-2xl shadow-2xl flex items-center justify-center hover:scale-105 transition-transform duration-300 border-2 border-background/30 p-1.5"
+							>
+								<img
+									src={`/productos/best_ofert${i}.png`}
+									alt={`Laptop oferta ${i}`}
+									class="max-w-[280px] max-h-[180px] object-contain rounded-2xl"
+									loading="lazy"
+								/>
+							</a>
+						))
+					}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

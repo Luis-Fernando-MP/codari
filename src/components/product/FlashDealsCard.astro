@@ -1,0 +1,60 @@
+---
+import { Badge } from '../ui/badge'
+import { Button } from '../ui/button'
+import { Card, CardContent } from '../ui/card'
+
+interface Product {
+	timeLeft: string
+	image: string
+	name: string
+	brand: string
+	price: string
+	originalPrice: string
+	discount: number
+	installments: string
+	stock: number
+}
+
+interface Props {
+	product: Product
+	index: number
+}
+
+const { product, index } = Astro.props
+---
+
+<Card key={index} className="group hover:shadow-xl transition-all duration-300">
+	<CardContent className="p-3 sm:p-4 lg:p-6 relative">
+		<div class="absolute top-2 left-2 z-2 p-1">
+			<Badge className="text-white" variant="primary"> ⚡ Flash Deal </Badge>
+		</div>
+		<div class="absolute top-2 right-2 z-2">
+			<Badge className="text-white" variant="secondary">
+				{product.timeLeft}
+			</Badge>
+		</div>
+
+		<div class="aspect-square mb-4 bg-gray-100 rounded-lg overflow-hidden">
+			<img
+				src={product.image ?? '/placeholder.svg'}
+				alt={product.name}
+				width={300}
+				height={300}
+				class="w-full h-full object-cover group-hover:scale-105 transition-transform"
+			/>
+		</div>
+
+		<div class="space-y-3">
+			<div class="text-xs text-gray-500 uppercase">{product.brand}</div>
+			<h3 class="text-lg sm:text-xl font-bold mb-3">{product.name}</h3>
+			<div class="flex items-center space-x-2">
+				<span class="text-2xl font-bold text-primary">{product.price}</span>
+				<span class="text-lg text-gray-500 line-through">{product.originalPrice}</span>
+				<Badge className="bg-primary text-white">-{product.discount}%</Badge>
+			</div>
+			<div class="text-sm text-green-600">{product.installments}</div>
+			<div class="text-sm text-primary">Solo {product.stock} disponibles</div>
+			<Button className="bg-primary text-sm sm:text-base px-4 sm:px-8 py-2 sm:py-3 w-full">¡Comprar Ahora!</Button>
+		</div>
+	</CardContent>
+</Card>

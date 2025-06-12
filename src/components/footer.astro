@@ -1,0 +1,101 @@
+---
+import { Facebook, Instagram, Phone } from 'lucide-react'
+---
+
+<footer class="bg-card border-t border-gray-200 pt-12 pb-6 mt-12 text-foreground">
+	<div class="container mx-auto px-4">
+		<div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+			{/* Logo y descripción */}
+			<div class="space-y-4">
+				<div class="flex items-center space-x-3">
+					<div class="rounded flex items-center justify-center">
+						<img src="/logo.svg" alt="CODARI Logo" width={30} height={30} />
+					</div>
+					<span class="text-2xl font-extrabold tracking-wide">CODARI</span>
+				</div>
+				<p class="text-sm">Tu tienda de tecnología de confianza con los mejores productos y precios.</p>
+				<div class="flex space-x-3">
+					<a
+						href="https://facebook.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="Facebook"
+						class="bg-background rounded-full p-2 transition"
+					>
+						<Facebook className="w-5 h-5" />
+					</a>
+					<a
+						href="https://instagram.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="Instagram"
+						class="bg-background rounded-full p-2 transition"
+					>
+						<Instagram className="w-5 h-5" />
+					</a>
+					<a
+						href="https://wa.me/51909290190"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="WhatsApp"
+						class="bg-background rounded-full p-2 transition"
+					>
+						<Phone className="w-5 h-5" />
+					</a>
+				</div>
+			</div>
+			{/* Enlaces de Empresa */}
+			<div class="space-y-4">
+				<h3 class="font-semibold uppercase tracking-wide">Empresa</h3>
+				<ul class="space-y-2 text-sm">
+					<li>
+						<a href="/" class="hover:text-primary transition" aria-label="home">Inicio</a>
+					</li>
+					<li>
+						<a href="/productos" class="hover:text-primary transition" aria-label="Productos">Productos</a>
+					</li>
+					<li>
+						<a href="/" class="hover:text-primary transition" aria-label="Precios">Precios</a>
+					</li>
+					<li>
+						<a href="/contacto" class="hover:text-primary transition" aria-label="Contacto">Contacto</a>
+					</li>
+				</ul>
+			</div>
+			{/* Enlaces de Más Info */}
+			<div class="space-y-4">
+				<h3 class="font-semibold uppercase tracking-wide">Más Info</h3>
+				<ul class="space-y-2 text-sm">
+					<li>
+						<a href="/" class="hover:text-primary transition" aria-label="Servicios">Servicios</a>
+					</li>
+					<li>
+						<a href="/" class="hover:text-primary transition" aria-label="Soporte">Soporte</a>
+					</li>
+					<li>
+						<a href="/" class="hover:text-primary transition" aria-label="Digital">Digital</a>
+					</li>
+				</ul>
+			</div>
+			{/* Enlaces de Recursos */}
+			<div class="space-y-4">
+				<h3 class="font-semibold uppercase tracking-wide">Recursos</h3>
+				<ul class="space-y-2 text-sm">
+					<li>
+						<a href="/" class="hover:text-primary transition" aria-label="Digital">Digital</a>
+					</li>
+					<li>
+						<a href="/" class="hover:text-primary transition" aria-label="Ayuda">Ayuda</a>
+					</li>
+					<li>
+						<a href="/" class="hover:text-primary transition" aria-label="Soporte">Soporte</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="border-t border-gray-200 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between text-sm">
+			<span>© {new Date().getFullYear()} CODARI. Todos los derechos reservados.</span>
+			<span>Hecho con ❤️ por tu equipo CODARI</span>
+		</div>
+	</div>
+</footer>

@@ -1,0 +1,29 @@
+---
+import { Card, CardContent } from '@/components/ui/card'
+
+interface Props {
+	image?: string
+	title: string
+	icon: any
+	productCount: number
+}
+
+const { image, title, icon, productCount } = Astro.props
+---
+
+<Card className="group hover:shadow-lg transition-all duration-300 cursor-pointer">
+	<CardContent className="p-6 text-center">
+		<div class="relative mb-4">
+			<img
+				src={image ?? '/placeholder.svg?height=100&width=100'}
+				alt={title}
+				width={100}
+				height={100}
+				class="mx-auto rounded-lg group-hover:scale-105 transition-transform"
+			/>
+			<div class="absolute -top-2 -right-2 bg-orange-500 text-white rounded-full p-2">{icon}</div>
+		</div>
+		<h3 class="text-lg sm:text-xl font-bold mb-3">{title}</h3>
+		<p class="text-sm text-gray-600">{productCount} productos</p>
+	</CardContent>
+</Card>
