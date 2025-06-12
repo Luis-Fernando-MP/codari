@@ -11,12 +11,12 @@ export function Header() {
 			{/* First Navigation Row */}
 			<div className="container mx-auto px-4 py-3">
 				<div className="flex items-center justify-between">
-					<div className="flex items-center space-x-2">
+					<a href="/" className="flex items-center space-x-2">
 						<div className="rounded flex items-center justify-center">
 							<img src="/logo.svg" alt="codari logo" width={30} height={30} />
 						</div>
 						<span className="text-xl font-bold">CODARI</span>
-					</div>
+					</a>
 
 					{/* Desktop nav */}
 					<nav className="hidden lg:flex space-x-8">
