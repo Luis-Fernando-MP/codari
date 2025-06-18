@@ -6,6 +6,7 @@ import Layout from '../layouts/Layout.astro'
 import { Header } from '@/components/header'
 import Footer from '@/components/footer.astro'
 import { HeroSlider } from '@/components/home/HeroSlider'
+import { FiestasPatriasOfertas } from '@/components/home/fiestas-patrias-ofertas'
 ---
 
 <Layout>
@@ -14,6 +15,8 @@ import { HeroSlider } from '@/components/home/HeroSlider'
 
 		{/* Slider */}
 		<HeroSlider client:load />
+
+		<FiestasPatriasOfertas />
 
 		{/* Best Offers Section */}
 		<section class="py-16 bg-gray-50 mt-10">
