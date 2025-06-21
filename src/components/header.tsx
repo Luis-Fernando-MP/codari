@@ -29,6 +29,9 @@ export function Header() {
 						<a href="/contacto" className="text-gray-600 hover:text-primary font-medium">
 							Contáctenos
 						</a>
+						<a href="/nosotros" className="text-gray-600 hover:text-primary font-medium">
+							Nosotros
+						</a>
 					</nav>
 
 					{/* Mobile menu button */}
