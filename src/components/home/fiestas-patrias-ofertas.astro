@@ -1,0 +1,116 @@
+---
+import { Star, Clock, Zap } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import Counter from './Counter'
+import { patriasOffers } from '@/constants/db'
+---
+
+<section class="py-16 bg-card relative overflow-hidden">
+	<div class="container mx-auto px-4 relative py-20">
+		<div class="text-center mb-12">
+			<div class="flex items-start justify-center mb-6 gap-3">
+				<div class="text-6xl">🇵🇪</div>
+				<div>
+					<h2 class="text-4xl md:text-5xl font-black text-primary mb-2">¡OFERTAS POR FIESTAS PATRIAS!</h2>
+					<p class="text-base font-bold text-gray-700">Celebremoslo con los mejores descuentos</p>
+				</div>
+				<div class="text-6xl">🎉</div>
+			</div>
+
+			<div class="rounded-lg max-w-md mx-auto">
+				<div class="flex items-center justify-center mb-4">
+					<Clock className="mr-2" size={15} />
+					<h4 class="text-gray-800">Tiempo restante:</h4>
+				</div>
+				<Counter client:load />
+			</div>
+		</div>
+
+		<div class="bg-gradient-to-br from-primary via-[#FB6300] to-primary text-white rounded-lg p-6 mb-12 text-center">
+			<h3 class="text-2xl font-bold">MEGA DESCUENTOS HASTA EL 28 DE JULIO</h3>
+			<span>Envío <b>GRATIS</b> en compras mayores a S/.500 + 12 meses sin intereses + 🏆 Garantía extendida</span>
+		</div>
+
+		{/* Products Grid */}
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+			{
+				patriasOffers.map((product, index) => (
+					<Card key={index} className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-none">
+						<CardContent className="p-4 relative">
+							<div class="absolute top-2 left-2 z-10">
+								<Badge className="bg-primary text-white animate-pulse">🇵🇪 -{product.discount}%</Badge>
+							</div>
+
+							{product.isLimitedTime && (
+								<div class="absolute top-2 right-2 z-10">
+									<Badge className="bg-yellow-500 text-black font-bold">⚡ LIMITADO</Badge>
+								</div>
+							)}
+
+							<div class="aspect-square mb-4 bg-gray-100 rounded-lg overflow-hidden relative">
+								<img
+									src={product.image ?? '/placeholder.svg'}
+									alt={product.name}
+									width={300}
+									height={300}
+									class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+								/>
+
+								<div class="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-white/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+							</div>
+
+							<div class="space-y-3">
+								<div class="text-xs text-gray-500 uppercase font-semibold">{product.brand}</div>
+								<h3 class="font-bold text-lg line-clamp-2 min-h-[3.5rem]">{product.name}</h3>
+
+								{/* Rating */}
+								<div class="flex items-center space-x-2">
+									<div class="flex">
+										{[...Array(5)].map((_, i) => (
+											<Star
+												key={i}
+												className={`w-4 h-4 ${i < product.rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
+											/>
+										))}
+									</div>
+									<span class="text-sm text-gray-600">({product.reviews})</span>
+								</div>
+
+								{/* Price */}
+								<div class="space-y-2">
+									<div class="flex items-center space-x-3">
+										<span class="text-2xl font-bold text-primary">S/.{product.price}</span>
+										<span class="text-lg text-gray-500 line-through">S/.{product.originalPrice}</span>
+									</div>
+									<div class="text-sm text-green-600 font-semibold">
+										¡Ahorras S/.{Number(product.originalPrice) - Number(product.price)}!
+									</div>
+								</div>
+
+								{/* Stock */}
+								<div class="flex items-center justify-between">
+									<span class="text-sm text-orange-600 font-semibold">Solo {product.stock} disponibles</span>
+									<Badge variant="outline" className="text-xs border-green-500 text-green-600">
+										Envío GRATIS
+									</Badge>
+								</div>
+
+								{/* Action Button */}
+								<Button className="w-full bg-primary hover:bg-red-700 text-white font-bold py-3 text-lg">
+									<a
+										href={`/producto/${product.name.toLowerCase().replace(/\s+/g, '-')}`}
+										class="flex items-center justify-center w-full text-white"
+									>
+										🛒 ¡COMPRAR AHORA!
+									</a>
+								</Button>
+							</div>
+						</CardContent>
+					</Card>
+				))
+			}
+		</div>
+	</div>
+</section>

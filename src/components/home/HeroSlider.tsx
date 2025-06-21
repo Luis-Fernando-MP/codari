@@ -9,7 +9,7 @@ const DotsNavigation = ({ slides, currentSlide, goToSlide, progress }) => (
 			const isActive = index === currentSlide
 			return (
 				<button
-					key={`${index}-dots-slider`}
+					key={`${index + 1}-dots-slider`}
 					onClick={() => goToSlide(index)}
 					className="relative flex items-center justify-center w-8 h-8 sm:w-12 sm:h-12 rounded-full transition-all duration-300"
 					aria-label={`Ir al slide ${index + 1}`}
@@ -212,7 +212,7 @@ export function HeroSlider() {
 	}, [isTransitioning])
 
 	return (
-		<section className="relative bg-gradient-to-br from-[#DD5213] via-[#FB6300] to-[#DD5213] border-t border-gray-200 overflow-hidden min-h-[85vh] flex items-center">
+		<section className="relative bg-gradient-to-br from-primary via-[#FB6300] to-primary overflow-hidden min-h-[85vh] flex items-center">
 			<FloatingSpheres />
 			<div className="relative z-2 w-full">
 				<div className="relative h-[500px] sm:h-[600px] md:h-[700px] overflow-hidden w-full">
