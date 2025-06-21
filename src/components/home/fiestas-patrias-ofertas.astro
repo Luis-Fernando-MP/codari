@@ -55,10 +55,10 @@ import { patriasOffers } from '@/constants/db'
 									alt={product.name}
 									width={300}
 									height={300}
-									class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+									class="w-full h-full object-cover group-hover:scale-150 group-hover:rotate-z-6 group-hover:translate-y-2 transition-transform duration-300"
 								/>
 
-								<div class="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-white/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+								<div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-white/20 opacity-0 group-hover:opacity-100 transition-opacity" />
 							</div>
 
 							<div class="space-y-3">
@@ -101,9 +101,9 @@ import { patriasOffers } from '@/constants/db'
 								<Button className="w-full bg-primary hover:bg-red-700 text-white font-bold py-3 text-lg">
 									<a
 										href={`/producto/${product.name.toLowerCase().replace(/\s+/g, '-')}`}
-										class="flex items-center justify-center w-full text-white"
+										class="flex items-center text-base justify-center w-full text-white"
 									>
-										🛒 ¡COMPRAR AHORA!
+										¡Comprar ahora!
 									</a>
 								</Button>
 							</div>

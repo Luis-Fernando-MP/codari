@@ -7,6 +7,7 @@ import { Header } from '@/components/header'
 import Footer from '@/components/footer.astro'
 import { HeroSlider } from '@/components/home/HeroSlider'
 import FiestasPatriasOfertas from '@/components/home/fiestas-patrias-ofertas.astro'
+import { products, recommendedProducts } from '@/constants/db'
 ---
 
 <Layout>
@@ -29,50 +30,7 @@ import FiestasPatriasOfertas from '@/components/home/fiestas-patrias-ofertas.ast
 				</div>
 				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 					{
-						[
-							{
-								category: 'LAPTOPS',
-								name: 'ASUS ROG Zephyrus G14 14"',
-								price: 'S/ 5000',
-								originalPrice: 'S/ 5,099',
-								image: '/productos/header_ofert1.png?height=300&width=300'
-							},
-							{
-								category: 'LAPTOPS',
-								name: 'VICTUS Gaming 15.6 FHD',
-								price: 'S/ 5400',
-								originalPrice: 'S/ 5700',
-								image: '/productos/header_ofert2.png?height=300&width=300'
-							},
-							{
-								category: 'LAPTOPS',
-								name: 'NITRO 5 Gaming 15.6 FHD',
-								price: 'S/ 4000',
-								originalPrice: 'S/ 4,500',
-								image: '/productos/header_ofert3.png?height=300&width=300'
-							},
-							{
-								category: 'PC GAMING',
-								name: 'PC Gamer AMD Ryzen 5 5600X',
-								price: 'S/ 3200',
-								originalPrice: 'S/ 4,000',
-								image: '/productos/headofert1.png?height=300&width=300'
-							},
-							{
-								category: 'SILLAS GAMING',
-								name: 'Silla Gaming DXRacer Racing Series',
-								price: 'S/ 399',
-								originalPrice: 'S/ 499',
-								image: '/productos/sillas/silla3.png?height=300&width=300'
-							},
-							{
-								category: 'SILLAS GAMING',
-								name: 'Silla Gaming DXRacer Formula Series',
-								price: 'S/ 79',
-								originalPrice: 'S/ 99',
-								image: '/productos/sillas/silla1.png?height=300&width=300'
-							}
-						].map((product, index) => (
+						products.map((product, index) => (
 							<Card key={index} className="group hover:shadow-lg transition-shadow">
 								<CardContent className="p-6">
 									<div class="aspect-square mb-4 bg-card rounded-lg overflow-hidden">
@@ -87,8 +45,8 @@ import FiestasPatriasOfertas from '@/components/home/fiestas-patrias-ofertas.ast
 									<div class="text-xs text-gray-500 mb-2">{product.category}</div>
 									<h3 class="font-semibold mb-2 line-clamp-2">{product.name}</h3>
 									<div class="flex items-center space-x-2">
-										<span class="text-lg font-bold">{product.price}</span>
-										<span class="text-sm text-gray-500 line-through">{product.originalPrice}</span>
+										<span class="text-lg font-bold">S/.{product.price}</span>
+										<span class="text-sm text-gray-500 line-through">S/.{product.originalPrice}</span>
 									</div>
 								</CardContent>
 							</Card>
@@ -112,44 +70,7 @@ import FiestasPatriasOfertas from '@/components/home/fiestas-patrias-ofertas.ast
 				<h2 class="text-3xl font-bold mb-8">RECOMENDADO PARA TI</h2>
 				<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
 					{
-						[
-							{
-								name: 'Smartphone Xiaomi Redmi Note 12 Pro',
-								price: '$299.00',
-								category: 'SMARTPHONES',
-								image: '/productos/audifonos/audifono1.png?height=150&width=150'
-							},
-							{
-								name: 'Carga Inalámbrica Belkin BoostCharge',
-								price: '$199.00',
-								category: 'AURICULARES',
-								image: '/productos/audifonos/audifono2.png?height=150&width=150'
-							},
-							{
-								name: 'Laptop HP Victus Gaming 15.6',
-								price: '$899.00',
-								category: 'TABLETS',
-								image: '/productos/audifonos/audifono3.png?height=150&width=150'
-							},
-							{
-								name: 'Juego de 4K Resident Evil 4',
-								price: '$1,099.00',
-								category: 'JUEGOS DE 4K',
-								image: '/productos/audifonos/audifono4.png?height=150&width=150'
-							},
-							{
-								name: 'Mochila Targus CityGear',
-								price: '$49.00',
-								category: 'MOCHILAS',
-								image: '/productos/audifonos/audifono5.png?height=150&width=150'
-							},
-							{
-								name: 'Mochila Targus CityGear',
-								price: '$39.00',
-								category: 'MOCHILAS',
-								image: '/productos/audifonos/audifono6.png?height=150&width=150'
-							}
-						].map((item, index) => (
+						recommendedProducts.map((item, index) => (
 							<Card key={index} className="group hover:shadow-lg transition-shadow">
 								<CardContent className="p-4 ">
 									<div class="aspect-square mb-3 bg-card rounded-lg">
@@ -163,7 +84,7 @@ import FiestasPatriasOfertas from '@/components/home/fiestas-patrias-ofertas.ast
 									</div>
 									<div class="text-xs text-gray-500 mb-1">{item.category}</div>
 									<h3 class="text-sm font-medium mb-2 line-clamp-2">{item.name}</h3>
-									<div class="text-lg font-bold">{item.price}</div>
+									<div class="text-lg font-bold">S/.{item.price}</div>
 								</CardContent>
 							</Card>
 						))
