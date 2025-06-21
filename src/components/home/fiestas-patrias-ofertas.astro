@@ -39,12 +39,12 @@ import { patriasOffers } from '@/constants/db'
 				patriasOffers.map((product, index) => (
 					<Card key={index} className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-none">
 						<CardContent className="p-4 relative">
-							<div class="absolute top-2 left-2 z-10">
+							<div class="absolute top-2 left-2 z-1">
 								<Badge className="bg-primary text-white animate-pulse">🇵🇪 -{product.discount}%</Badge>
 							</div>
 
 							{product.isLimitedTime && (
-								<div class="absolute top-2 right-2 z-10">
+								<div class="absolute top-2 right-2 z-1">
 									<Badge className="bg-yellow-500 text-black font-bold">⚡ LIMITADO</Badge>
 								</div>
 							)}
