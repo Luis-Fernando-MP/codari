@@ -59,7 +59,7 @@ export default function ImprovedCarousel({
 				<div className="flex space-x-2">
 					{Array.from({ length: Math.ceil(products.length / itemsPerView) }).map((_, index) => (
 						<button
-							key={index}
+							key={index + 'ImprovedCarousel'}
 							onClick={() => setCurrentIndex(index)}
 							aria-label={`Ir al slide ${index + 1}`}
 							className={`w-2 h-2 rounded-full transition-colors ${index === currentIndex ? 'bg-orange-500' : 'bg-gray-300'}`}
