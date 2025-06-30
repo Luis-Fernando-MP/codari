@@ -30,45 +30,39 @@ export const teamMembers = [
 	},
 	{
 		name: 'Gonzalez Chaca, Angel Jefferson',
-		role: 'CTO & Full-Stack Developer',
-		description: 'Director de Tecnología especializado en desarrollo full-stack, DevOps y arquitectura de sistemas escalables.',
-		image: '/placeholder.svg?height=128&width=128',
+		role: 'Backend Developer & Odoo Specialist',
+		description: 'Ingeniero de Software con enfoque en desarrollo backend, automatización de procesos y especialización en sistemas ERP con Odoo.',
+		image: 'https://i.pinimg.com/736x/11/ce/8d/11ce8d180698b3a20c820379d15b39aa.jpg',  
 		experience: [
-			'4+ años en desarrollo web y mobile',
-			'Especialista en arquitectura cloud y DevOps',
-			'Ex-ingeniero de software en startups fintech',
-			'Certificado en AWS y Google Cloud Platform'
+			'+1 año de experiencia trabajando con Odoo (v13 a v18)',
+			'Integración de APIs REST para automatización de pedidos y logística',
+			'Experiencia en consumo de servicios de terceros (WhatsApp, Envíame, Drivin)',
+			'Manejo de entornos con Docker y despliegues en producción'
 		],
-		programmingLanguages: ['JavaScript', 'TypeScript', 'Python', 'PHP', 'Dart', 'SQL'],
+		programmingLanguages: ['Python', 'JavaScript', 'XML', 'SQL', 'Bash', 'HTML', 'CSS', 'Astro'],
 		technicalSkills: [
-			'Vue.js',
-			'Angular',
-			'Laravel',
-			'Django',
-			'Flutter',
-			'Firebase',
-			'AWS',
-			'GCP',
-			'CI/CD',
-			'Terraform',
-			'Monitoring',
-			'Security'
+			'Odoo Framework',
+			'Python',
+			'APIs REST (consumo y creación)',
+			'PostgreSQL',
+			'Git & GitHub',
+			'Docker',
+			'Linux Server',
+			'HTML & CSS (Tailwind, Astro)'
 		],
 		softSkills: [
-			'Gestión de Equipos',
-			'Planificación',
-			'Comunicación Técnica',
-			'Innovación',
-			'Resolución de Conflictos',
-			'Mentoring',
-			'Análisis de Datos'
+			'Comunicación efectiva con usuarios finales',
+			'Resolución de problemas técnicos complejos',
+			'Aprendizaje autónomo',
+			'Responsabilidad en proyectos en producción',
+			'Colaboración en equipos multidisciplinarios'
 		],
 		activities: [
-			'Implementación de infraestructura cloud',
-			'Desarrollo de aplicaciones web y mobile',
-			'Gestión de bases de datos y optimización',
-			'Implementación de sistemas de seguridad',
-			'Automatización de procesos de deployment'
+			'Desarrollo de módulos personalizados en Odoo',
+			'Creación de controladores REST en Odoo para integraciones externas',
+			'Manejo de flujos de entrega vía WhatsApp Business API',
+			'Implementación de crons y webhooks para automatizaciones',
+			'Documentación técnica y pruebas de calidad'
 		]
 	},
 	{

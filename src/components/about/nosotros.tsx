@@ -1,4 +1,4 @@
-import { Heart, Award, Zap, TrendingUp, Code, Palette, Cpu } from 'lucide-react'
+import { Heart, Award, Zap, TrendingUp, Code, Palette, Cpu, Lightbulb, MessageSquare } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 
@@ -149,5 +149,53 @@ export function OrganizationalChart() {
 				</Card>
 			</div>
 		</div>
+	)
+}
+
+export function CultureCompany() {
+	return (
+		<section className="py-16">
+			<div className="container mx-auto px-4">
+				<div className="max-w-4xl mx-auto text-center">
+					<h2 className="text-3xl font-bold mb-8">Nuestra Cultura de Trabajo</h2>
+					<p className="text-gray-600 text-lg mb-12">
+						En CODARI creemos en la colaboración, la innovación constante y el crecimiento personal y profesional de nuestro
+						equipo.
+					</p>
+
+					<div className="grid md:grid-cols-3 gap-8">
+						<Card className="group hover:shadow-lg transition-all duration-300">
+							<CardContent className="p-6 text-center">
+								<div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+									<Lightbulb className="w-8 h-8 text-blue-600" />
+								</div>
+								<h3 className="text-xl font-bold mb-3">Innovación</h3>
+								<p className="text-gray-600">Fomentamos la creatividad y la experimentación con nuevas tecnologías y metodologías.</p>
+							</CardContent>
+						</Card>
+
+						<Card className="group hover:shadow-lg transition-all duration-300">
+							<CardContent className="p-6 text-center">
+								<div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+									<MessageSquare className="w-8 h-8 text-green-600" />
+								</div>
+								<h3 className="text-xl font-bold mb-3">Colaboración</h3>
+								<p className="text-gray-600">Trabajamos en equipo, compartiendo conocimientos y apoyándonos mutuamente.</p>
+							</CardContent>
+						</Card>
+
+						<Card className="group hover:shadow-lg transition-all duration-300">
+							<CardContent className="p-6 text-center">
+								<div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+									<TrendingUp className="w-8 h-8 text-purple-600" />
+								</div>
+								<h3 className="text-xl font-bold mb-3">Crecimiento</h3>
+								<p className="text-gray-600">Promovemos el desarrollo continuo y el aprendizaje de nuevas habilidades.</p>
+							</CardContent>
+						</Card>
+					</div>
+				</div>
+			</div>
+		</section>
 	)
 }

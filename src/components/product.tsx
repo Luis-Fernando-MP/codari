@@ -4,6 +4,7 @@ import { Input } from '@/components/ui/input'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { relatedProducts } from '@/constants/db_product'
 
 const getProductData = (id: string) => {
 	return {
@@ -66,41 +67,6 @@ const getProductData = (id: string) => {
 		returns: '30 días para devoluciones gratuitas'
 	}
 }
-
-const relatedProducts = [
-	{
-		name: 'iPhone 15 Pro 128GB',
-		price: '$999',
-		originalPrice: '$1,099',
-		rating: 4.7,
-		reviews: 1234,
-		image: '/placeholder.svg?height=200&width=200'
-	},
-	{
-		name: 'AirPods Pro (2ª gen)',
-		price: '$249',
-		originalPrice: '$279',
-		rating: 4.9,
-		reviews: 5678,
-		image: '/placeholder.svg?height=200&width=200'
-	},
-	{
-		name: 'MagSafe Charger',
-		price: '$39',
-		originalPrice: '$49',
-		rating: 4.5,
-		reviews: 890,
-		image: '/placeholder.svg?height=200&width=200'
-	},
-	{
-		name: 'iPhone 15 Pro Max Case',
-		price: '$59',
-		originalPrice: '$79',
-		rating: 4.6,
-		reviews: 456,
-		image: '/placeholder.svg?height=200&width=200'
-	}
-]
 
 export default function ProductDetailPage() {
 	const product = getProductData('Comida')
