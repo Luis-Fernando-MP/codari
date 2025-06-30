@@ -1,6 +1,7 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useState, useEffect, useCallback } from 'react'
+import { slides } from '@/constants/db_product'
 
 // Componente para los dots de navegación con vistas previas y loader
 const DotsNavigation = ({ slides, currentSlide, goToSlide, progress }) => (
@@ -124,45 +125,6 @@ export function HeroSlider() {
 	const [currentSlide, setCurrentSlide] = useState(0)
 	const [isTransitioning, setIsTransitioning] = useState(false)
 	const [progress, setProgress] = useState(0)
-
-	const slides = [
-		{
-			id: 1,
-			category: 'iPhone 15 Pro Max',
-			title: 'TECNOLOGÍA\nQUE IMPACTA',
-			description: 'Explora el futuro con nuestros productos de última generación que transforman tu experiencia digital.',
-			price: 's/ 4,999.00',
-			image: '/inicio/head.png?height=500&width=600',
-			buttonText: 'Ver Detalles'
-		},
-		{
-			id: 2,
-			category: 'MacBook Pro M3',
-			title: 'POTENCIA\nSIN LÍMITES',
-			description: 'Experimenta el rendimiento profesional con el nuevo chip M3 que revoluciona tu productividad.',
-			price: 's/ 5,999.00',
-			image: '/inicio/head2.png?height=500&width=600',
-			buttonText: 'Descubrir Más'
-		},
-		{
-			id: 3,
-			category: 'AirPods Pro',
-			title: 'SONIDO\nINMERSIVO',
-			description: 'Sumérgete en una experiencia auditiva única con cancelación de ruido activa de nueva generación.',
-			price: 's/ 999.00',
-			image: '/inicio/head3.png?height=500&width=600',
-			buttonText: 'Escuchar Ahora'
-		},
-		{
-			id: 4,
-			category: 'Apple Watch Ultra',
-			title: 'AVENTURA\nSIN FRONTERAS',
-			description: 'El reloj más resistente y avanzado para los que buscan superar todos los límites.',
-			price: 's/ 600.00',
-			image: '/inicio/head4.png?height=500&width=600',
-			buttonText: 'Explorar'
-		}
-	]
 
 	const nextSlide = useCallback(() => {
 		if (isTransitioning) return
