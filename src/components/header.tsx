@@ -74,22 +74,26 @@ export function Header() {
                         </div>
 
                         <div className="w-full sm:flex-1 sm:max-w-md sm:mx-4 lg:mx-8 mb-2 sm:mb-0">
-							<form action="/buscar" method="GET" className="relative">
-								<input
-									type="text"
-									name="q"
-									placeholder="Buscar productos..."
-									className="pl-10 pr-20 w-full bg-white border-gray-300"
-									required
-								/>
-								<button
-									type="submit"
-									className="absolute right-1 top-1/2 transform -translate-y-1/2 h-8 px-3 bg-orange-500 text-white rounded"
-								>
-									Buscar
-								</button>
-							</form>
-						</div>
+                            <form action="/buscar" method="GET" className="relative">
+                                <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+                                    <Search className="w-5 h-5" />
+                                </span>
+                                <Input
+                                    type="text"
+                                    name="q"
+                                    placeholder="Buscar productos..."
+                                    className="pl-10 pr-20 w-full bg-white border border-gray-300 rounded h-10"
+                                    required
+                                />
+                                <Button
+                                    type="submit"
+                                    size="sm"
+                                    className="absolute right-1 top-1/2 transform -translate-y-1/2 h-8 px-3 bg-orange-500 text-white rounded"
+                                >
+                                    Buscar
+                                </Button>
+                            </form>
+                        </div>
 
                         <div className="flex items-center space-x-2 text-sm">
                             <PhoneIcon className="w-4 h-4" />

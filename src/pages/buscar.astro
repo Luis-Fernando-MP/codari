@@ -1,5 +1,4 @@
 ---
-// filepath: d:\Project\codari\src\pages\buscar.astro
 import Layout from '../layouts/Layout.astro'
 import { Header } from '../components/header'
 import { 
@@ -16,8 +15,6 @@ import {
 const url = new URL(Astro.request.url)
 const searchQuery = url.searchParams.get('q') || ''
 
-console.log('🔍 Search Query:', searchQuery)
-
 const allProducts = [
   ...laptops,
   ...audifonos, 
@@ -28,6 +25,7 @@ const allProducts = [
   ...products,
   ...recommendedProducts
 ]
+export const prerender = false
 
 let searchResults: any[] = []
 if (searchQuery && searchQuery.trim() !== '') {
@@ -51,14 +49,6 @@ if (searchQuery && searchQuery.trim() !== '') {
       <p class="text-gray-500">
         Buscando en {allProducts.length} productos disponibles
       </p>
-    </div>
-
-    <!-- Debug info -->
-    <div class="mb-4 p-4 bg-yellow-100 rounded border">
-      <p><strong>🌐 URL:</strong> {Astro.request.url}</p>
-      <p><strong>🔍 Query:</strong> "{searchQuery}"</p>
-      <p><strong>📊 Resultados:</strong> {searchResults.length}</p>
-      <p><strong>🔤 Primer producto:</strong> {allProducts[0]?.name || 'No hay'}</p>
     </div>
 
     {!searchQuery || searchQuery.trim() === '' ? (
@@ -92,10 +82,10 @@ if (searchQuery && searchQuery.trim() !== '') {
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {searchResults.map((product: any) => (
             <div class="border rounded-lg p-4 shadow hover:shadow-lg transition-shadow bg-white">
-              <img 
-                src={product.image || '/placeholder.jpg'} 
+              <img
+                src={product.image || '/placeholder.jpg'}
                 alt={product.name}
-                class="w-full h-40 object-cover rounded mb-3"
+                class="w-full h-48 object-contain bg-white rounded mb-3"
               />
               <h3 class="font-bold text-lg mb-2 line-clamp-2">{product.name}</h3>
               <div class="flex items-center gap-2 mb-2">
