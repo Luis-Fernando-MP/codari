@@ -55,7 +55,7 @@ export default function ProductDetailPage({ producto }: any) {
       Conectividad: "5G, Wi-Fi 6E, Bluetooth 5.3",
       "Sistema Operativo": "iOS 17",
       Dimensiones: "159.9 x 76.7 x 8.25 mm",
-      Peso: "221 gramos",
+      Peso: "221 gramo",
     },
     colors: [
       { name: "Titanio Natural", value: "natural", available: true },
