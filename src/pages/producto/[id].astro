@@ -5,18 +5,24 @@ import { Header } from '@/components/header'
 import Footer from '@/components/footer.astro'
 import Layout from '@/layouts/Layout.astro'
 import Product from '@/components/product'
+import { allProducts } from '@/constants/db_product';
 
-export const getStaticPaths = () => {
-	return [{ params: { id: 'ejemplo' } }, { params: { id: '2' } }, { params: { id: '3' } }]
-}
+/* export const getStaticPaths = () => {
+  return products.map(product => ({
+    params: { id: product.id }
+  }));
+}; */
+
+export const prerender = false
 
 const { id } = Astro.params
+const producto = allProducts.find(p => p.id === id);
 ---
 
 <Layout>
 	<div class="min-h-screen bg-white">
 		<Header client:load />
-		<Product />
+		<Product producto={producto} />
 		<h1 class="text-3xl font-bold text-center py-20">ID del producto: {id}</h1>
 		<Footer />
 	</div>

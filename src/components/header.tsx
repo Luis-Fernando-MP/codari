@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 
 export function Header() {
-	const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 	return (
 		<header className="border-b border-gray-200 sticky top-0 z-10 bg-background">
