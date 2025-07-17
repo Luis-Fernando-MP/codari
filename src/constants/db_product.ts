@@ -1,3 +1,129 @@
+export const categories = [
+	{
+		id: 'laptops',
+		title: 'Laptops Gaming',
+		icon: '🎮',
+		productCount: 156,
+		image: '/productos/categorias/cat1.png?height=100&width=100'
+	},
+	{
+		id: 'smartphones',
+		title: 'Smartphones',
+		icon: '📱',
+		productCount: 234,
+		image: '/productos/categorias/cat2.png?height=100&width=100'
+	},
+	{
+		id: 'audifonos',
+		title: 'Audífonos',
+		icon: '🎧',
+		productCount: 89,
+		image: '/productos/categorias/cat3.png?height=100&width=100'
+	},
+	{
+		id: 'televisores',
+		title: 'Televisores',
+		icon: '📺',
+		productCount: 67,
+		image: '/productos/categorias/cat4.png?height=100&width=100'
+	},
+	{
+		id: 'lsmartwatches',
+		title: 'Smartwatches',
+		icon: '⌚',
+		productCount: 45,
+		image: '/productos/categorias/cat5.png?height=100&width=100'
+	},
+	{
+		id: 'sillas',
+		title: 'Sillas',
+		icon: '🔌',
+		productCount: 178,
+		image: '/productos/categorias/cat6.png?height=100&width=100'
+	}
+]
+
+export const brandLogos = [
+	{ id: 'log', name: 'Logitech', src: '/productos/marcas/logo1.png' },
+	{ id: 'sam', name: 'Samsung', src: '/productos/marcas/logo2.png' },
+	{ id: 'hyp', name: 'HyperX', src: '/productos/marcas/logo3.png' },
+	{ id: 'asu', name: 'Asus', src: '/productos/marcas/logo4.png' }
+]
+
+export const relatedProducts = [
+	{
+		name: 'iPhone 15 Pro 128GB',
+		price: '$999',
+		originalPrice: '$1,099',
+		rating: 4.7,
+		reviews: 1234,
+		image: '/placeholder.svg?height=200&width=200'
+	},
+	{
+		name: 'AirPods Pro (2ª gen)',
+		price: '$249',
+		originalPrice: '$279',
+		rating: 4.9,
+		reviews: 5678,
+		image: '/placeholder.svg?height=200&width=200'
+	},
+	{
+		name: 'MagSafe Charger',
+		price: '$39',
+		originalPrice: '$49',
+		rating: 4.5,
+		reviews: 890,
+		image: '/placeholder.svg?height=200&width=200'
+	},
+	{
+		name: 'iPhone 15 Pro Max Case',
+		price: '$59',
+		originalPrice: '$79',
+		rating: 4.6,
+		reviews: 456,
+		image: '/placeholder.svg?height=200&width=200'
+	}
+]
+
+export const slides = [
+	{
+		id: 1,
+		category: 'iPhone 15 Pro Max',
+		title: 'TECNOLOGÍA\nQUE IMPACTA',
+		description: 'Explora el futuro con nuestros productos de última generación que transforman tu experiencia digital.',
+		price: 's/ 4,999.00',
+		image: '/inicio/head.png?height=500&width=600',
+		buttonText: 'Ver Detalles'
+	},
+	{
+		id: 2,
+		category: 'MacBook Pro M3',
+		title: 'POTENCIA\nSIN LÍMITES',
+		description: 'Experimenta el rendimiento profesional con el nuevo chip M3 que revoluciona tu productividad.',
+		price: 's/ 5,999.00',
+		image: '/inicio/head2.png?height=500&width=600',
+		buttonText: 'Descubrir Más'
+	},
+	{
+		id: 3,
+		category: 'AirPods Pro',
+		title: 'SONIDO\nINMERSIVO',
+		description: 'Sumérgete en una experiencia auditiva única con cancelación de ruido activa de nueva generación.',
+		price: 's/ 999.00',
+		image: '/inicio/head3.png?height=500&width=600',
+		buttonText: 'Escuchar Ahora'
+	},
+	{
+		id: 4,
+		category: 'Apple Watch Ultra',
+		title: 'AVENTURA\nSIN FRONTERAS',
+		description: 'El reloj más resistente y avanzado para los que buscan superar todos los límites.',
+		price: 's/ 600.00',
+		image: '/inicio/head4.png?height=500&width=600',
+		buttonText: 'Explorar'
+	}
+]
+
 export const laptops = [
   {
     id: "laptol-1",
@@ -901,7 +1027,7 @@ export const Sillas = [
   },
 ];
 
-// Ofertas Flash
+
 export const flashDeals = [
   {
     id: "lll5",
@@ -1014,136 +1140,6 @@ export const flashDeals = [
     warranty: "1 año de garantía Halion",
     shipping: ["Envío estándar gratis", "Envío express disponible"],
     returns: ["Devolución en 15 días", "Cambio por defecto de fábrica"],
-  },
-];
-
-export const categories = [
-  {
-    id: "laptops",
-    title: "Laptops Gaming",
-    icon: "🎮",
-    productCount: 156,
-    image: "/productos/categorias/cat1.png?height=100&width=100",
-  },
-  {
-    id: "smartphones",
-    title: "Smartphones",
-    icon: "📱",
-    productCount: 234,
-    image: "/productos/categorias/cat2.png?height=100&width=100",
-  },
-  {
-    id: "audifonos",
-    title: "Audífonos",
-    icon: "🎧",
-    productCount: 89,
-    image: "/productos/categorias/cat3.png?height=100&width=100",
-  },
-  {
-    id: "televisores",
-    title: "Televisores",
-    icon: "📺",
-    productCount: 67,
-    image: "/productos/categorias/cat4.png?height=100&width=100",
-  },
-  {
-    id: "lsmartwatches",
-    title: "Smartwatches",
-    icon: "⌚",
-    productCount: 45,
-    image: "/productos/categorias/cat5.png?height=100&width=100",
-  },
-  {
-    id: "sillas",
-    title: "Sillas",
-    icon: "🔌",
-    productCount: 178,
-    image: "/productos/categorias/cat6.png?height=100&width=100",
-  },
-];
-
-export const brandLogos = [
-  { id: "log", name: "Logitech", src: "/productos/marcas/logo1.png" },
-  { id: "sam", name: "Samsung", src: "/productos/marcas/logo2.png" },
-  { id: "hyp", name: "HyperX", src: "/productos/marcas/logo3.png" },
-  { id: "asu", name: "Asus", src: "/productos/marcas/logo4.png" },
-];
-
-export const relatedProducts = [
-  {
-    name: "iPhone 15 Pro 128GB",
-    price: "$999",
-    originalPrice: "$1,099",
-    rating: 4.7,
-    reviews: 1234,
-    image: "/placeholder.svg?height=200&width=200",
-  },
-  {
-    name: "AirPods Pro (2ª gen)",
-    price: "$249",
-    originalPrice: "$279",
-    rating: 4.9,
-    reviews: 5678,
-    image: "/placeholder.svg?height=200&width=200",
-  },
-  {
-    name: "MagSafe Charger",
-    price: "$39",
-    originalPrice: "$49",
-    rating: 4.5,
-    reviews: 890,
-    image: "/placeholder.svg?height=200&width=200",
-  },
-  {
-    name: "iPhone 15 Pro Max Case",
-    price: "$59",
-    originalPrice: "$79",
-    rating: 4.6,
-    reviews: 456,
-    image: "/placeholder.svg?height=200&width=200",
-  },
-];
-
-export const slides = [
-  {
-    id: 1,
-    category: "iPhone 15 Pro Max",
-    title: "TECNOLOGÍA\nQUE IMPACTA",
-    description:
-      "Explora el futuro con nuestros productos de última generación que transforman tu experiencia digital.",
-    price: "s/ 4,999.00",
-    image: "/inicio/head.png?height=500&width=600",
-    buttonText: "Ver Detalles",
-  },
-  {
-    id: 2,
-    category: "MacBook Pro M3",
-    title: "POTENCIA\nSIN LÍMITES",
-    description:
-      "Experimenta el rendimiento profesional con el nuevo chip M3 que revoluciona tu productividad.",
-    price: "s/ 5,999.00",
-    image: "/inicio/head2.png?height=500&width=600",
-    buttonText: "Descubrir Más",
-  },
-  {
-    id: 3,
-    category: "AirPods Pro",
-    title: "SONIDO\nINMERSIVO",
-    description:
-      "Sumérgete en una experiencia auditiva única con cancelación de ruido activa de nueva generación.",
-    price: "s/ 999.00",
-    image: "/inicio/head3.png?height=500&width=600",
-    buttonText: "Escuchar Ahora",
-  },
-  {
-    id: 4,
-    category: "Apple Watch Ultra",
-    title: "AVENTURA\nSIN FRONTERAS",
-    description:
-      "El reloj más resistente y avanzado para los que buscan superar todos los límites.",
-    price: "s/ 600.00",
-    image: "/inicio/head4.png?height=500&width=600",
-    buttonText: "Explorar",
   },
 ];
 

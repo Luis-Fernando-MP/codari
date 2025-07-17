@@ -141,3 +141,8 @@
 .lucide {
 	stroke-width: 1.5;
 }
+
+a,
+button {
+	cursor: pointer !important;
+}

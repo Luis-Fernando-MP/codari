@@ -33,6 +33,7 @@ const DotsNavigation = ({ slides, currentSlide, goToSlide, progress }) => (
 							</svg>
 						</div>
 					)}
+
 					<img
 						src={slide.image ?? '/placeholder.svg'}
 						alt={slide.category}
