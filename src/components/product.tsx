@@ -8,7 +8,7 @@ import { relatedProducts } from '@/constants/db_product'
 export default function ProductDetailPage({ producto }: any) {
 	const product = {
 		id: producto?.id ?? 'id',
-		name: producto?.name ?? 'Producto genérico',
+		name: producto?.name ?? producto?.title ?? 'Producto genérico',
 		brand: producto?.brand ?? 'Marca genérica',
 		price: producto?.price ?? '$0',
 		originalPrice: producto?.originalPrice ?? '$0',
@@ -98,10 +98,10 @@ export default function ProductDetailPage({ producto }: any) {
 								<span className="text-2xl text-gray-500 line-through">{String(product?.originalPrice)}</span>
 							</div>
 							<div className="text-green-600 font-semibold">
-								¡Ahorras ${Number(String(product?.originalPrice).slice(1)) - Number(String(product?.price).slice(1))}!
+								¡Ahorras $/. {Number(String(product?.originalPrice).slice(1)) - Number(String(product?.price).slice(1))}!
 							</div>
 							<div className="text-sm text-gray-600">
-								o 12 cuotas sin interés de ${Math.round(Number(String(product?.price).slice(1)) / 12)}
+								o 12 cuotas sin interés de S/. {Math.round(Number(String(product?.price).slice(1)) / 12)}
 							</div>
 						</div>
 

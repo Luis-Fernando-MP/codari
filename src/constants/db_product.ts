@@ -92,6 +92,7 @@ export const relatedProducts = [
 export const slides = [
 	{
 		id: 'iPhone-15-Pro-Max',
+		name: 'iPhone 15 Pro Max',
 		category: 'iPhone 15 Pro Max',
 		title: 'TECNOLOGÍA\nQUE IMPACTA',
 		description: 'Explora el futuro con nuestros productos de última generación que transforman tu experiencia digital.',
@@ -101,6 +102,7 @@ export const slides = [
 	},
 	{
 		id: 'MacBook--Pro-M3',
+		name: 'MacBook Pro M3',
 		category: 'MacBook Pro M3',
 		title: 'POTENCIA\nSIN LÍMITES',
 		description: 'Experimenta el rendimiento profesional con el nuevo chip M3 que revoluciona tu productividad.',
@@ -110,6 +112,7 @@ export const slides = [
 	},
 	{
 		id: 'AirPods-Pro',
+		name: 'AirPods Pro',
 		category: 'AirPods Pro',
 		title: 'SONIDO\nINMERSIVO',
 		description: 'Sumérgete en una experiencia auditiva única con cancelación de ruido activa de nueva generación.',
@@ -119,6 +122,7 @@ export const slides = [
 	},
 	{
 		id: 'Apple-Watch-Ultra',
+		name: 'Apple Watch Ultra',
 		category: 'Apple Watch Ultra',
 		title: 'AVENTURA\nSIN FRONTERAS',
 		description: 'El reloj más resistente y avanzado para los que buscan superar todos los límites.',
