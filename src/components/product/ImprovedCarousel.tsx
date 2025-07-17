@@ -95,7 +95,7 @@ export default function ImprovedCarousel({
 									{/* Product Image */}
 									<div className="aspect-square mb-3 bg-gray-100 rounded-lg overflow-hidden relative">
 										<img
-											src={product.image ?? '/placeholder.svg?height=200&width=200'}
+											src={product.image ?? '/logo.svg?height=200&width=200'}
 											alt={product.name}
 											width={200}
 											height={200}

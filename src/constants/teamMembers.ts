@@ -31,8 +31,9 @@ export const teamMembers = [
 	{
 		name: 'Gonzalez Chaca, Angel Jefferson',
 		role: 'Backend Developer & Odoo Specialist',
-		description: 'Ingeniero de Software con enfoque en desarrollo backend, automatización de procesos y especialización en sistemas ERP con Odoo.',
-		image: 'https://i.pinimg.com/736x/11/ce/8d/11ce8d180698b3a20c820379d15b39aa.jpg',  
+		description:
+			'Ingeniero de Software con enfoque en desarrollo backend, automatización de procesos y especialización en sistemas ERP con Odoo.',
+		image: 'https://i.pinimg.com/736x/11/ce/8d/11ce8d180698b3a20c820379d15b39aa.jpg',
 		experience: [
 			'+1 año de experiencia trabajando con Odoo (v13 a v18)',
 			'Integración de APIs REST para automatización de pedidos y logística',
@@ -69,7 +70,7 @@ export const teamMembers = [
 		name: 'Alfaro Muñoz, Anderson',
 		role: 'CPO & Frontend Developer',
 		description: 'Director de Producto enfocado en experiencia de usuario, desarrollo frontend y estrategia de producto digital.',
-		image: '/placeholder.svg?height=128&width=128',
+		image: '/logo.svg?height=128&width=128',
 		experience: [
 			'3+ años en desarrollo frontend y UX/UI',
 			'Especialista en diseño de experiencias digitales',

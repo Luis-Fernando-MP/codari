@@ -1,37 +1,34 @@
-import { Search, Star, Heart, Share2, ShoppingCart, Truck, Shield, RotateCcw, Plus, Minus, Check } from 'lucide-react'
+import { Star, Heart, Share2, ShoppingCart, Truck, Shield, RotateCcw, Plus, Minus, Check } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { Tabs, TabsContent } from '@/components/ui/tabs'
 import { relatedProducts } from '@/constants/db_product'
 
 export default function ProductDetailPage({ producto }: any) {
-  const product = {
-    id: producto?.id ?? "id",
-    name: producto?.name ?? "Producto genérico",
-    brand: producto?.brand ?? "Marca genérica",
-    price: producto?.price ?? "$0",
-    originalPrice: producto?.originalPrice ?? "$0",
-    discount: producto?.discount ?? 0,
-    rating: producto?.rating ?? 0,
-    reviews: producto?.reviews ?? 0,
-    inStock: true,
-    stockCount: producto?.stock ?? 0,
-    sku: producto?.sku ?? "SKU-GENERICO",
-    category: producto?.category ?? "Categoría genérica",
-    images: producto?.images ?? [producto?.image ?? "/placeholder.svg"],
-    description: producto?.description ?? "Sin descripción disponible.",
-    features: producto?.features ?? ["Sin características disponibles."],
-    specifications: producto?.specifications ?? {},
-    colors: producto?.colors ?? [
-      { name: "Genérico", value: "#ccc", available: true },
-    ],
-    storage: producto?.storage ?? [],
-    warranty: producto?.warranty ?? "Sin garantía.",
-    shipping: producto?.shipping ?? "Sin información de envío.",
-    returns: producto?.returns ?? "Sin información de devoluciones.",
-  };
+	const product = {
+		id: producto?.id ?? 'id',
+		name: producto?.name ?? 'Producto genérico',
+		brand: producto?.brand ?? 'Marca genérica',
+		price: producto?.price ?? '$0',
+		originalPrice: producto?.originalPrice ?? '$0',
+		discount: producto?.discount ?? 0,
+		rating: producto?.rating ?? 0,
+		reviews: producto?.reviews ?? 0,
+		inStock: true,
+		stockCount: producto?.stock ?? 0,
+		sku: producto?.sku ?? 'SKU-GENERICO',
+		category: producto?.category ?? 'Categoría genérica',
+		images: producto?.images ?? [producto?.image ?? '/logo.svg'],
+		description: producto?.description ?? 'Sin descripción disponible.',
+		features: producto?.features ?? ['Sin características disponibles.'],
+		specifications: producto?.specifications ?? {},
+		colors: producto?.colors ?? [{ name: 'Genérico', value: '#ccc', available: true }],
+		storage: producto?.storage ?? [],
+		warranty: producto?.warranty ?? 'Sin garantía.',
+		shipping: producto?.shipping ?? 'Sin información de envío.',
+		returns: producto?.returns ?? 'Sin información de devoluciones.'
+	}
 
 	return (
 		<div className="min-h-screen bg-white">
@@ -42,22 +39,22 @@ export default function ProductDetailPage({ producto }: any) {
 					<div className="space-y-4">
 						<div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
 							<img
-								src={product.images[0] || '/placeholder.svg'}
-								alt={product.name}
+								src={product?.images[0] || '/logo.svg'}
+								alt={product?.name}
 								width={600}
 								height={600}
 								className="w-full h-full object-cover"
 							/>
 						</div>
 						<div className="grid grid-cols-4 gap-4">
-							{product.images.map((image, index) => (
+							{product?.images.map((image, index) => (
 								<div
 									key={index}
 									className="aspect-square bg-gray-100 rounded-lg overflow-hidden cursor-pointer hover:ring-2 hover:ring-orange-500"
 								>
 									<img
-										src={image || '/placeholder.svg'}
-										alt={`${product.name} ${index + 1}`}
+										src={image || '/logo.svg'}
+										alt={`${product?.name} ${index + 1}`}
 										width={150}
 										height={150}
 										className="w-full h-full object-cover"
@@ -73,47 +70,47 @@ export default function ProductDetailPage({ producto }: any) {
 						<div>
 							<div className="flex items-center space-x-2 mb-2">
 								<Badge variant="outline" className="text-xs">
-									{product.brand}
+									{product?.brand}
 								</Badge>
-								<Badge className="bg-red-500 text-white text-xs">-{product.discount}%</Badge>
+								<Badge className="bg-red-500 text-white text-xs">-{product?.discount}%</Badge>
 							</div>
-							<h1 className="text-3xl font-bold mb-4">{product.name}</h1>
+							<h1 className="text-3xl font-bold mb-4">{product?.name}</h1>
 							<div className="flex items-center space-x-4 mb-4">
 								<div className="flex items-center space-x-1">
 									{[...Array(5)].map((_, i) => (
 										<Star
 											key={i}
 											className={`w-5 h-5 ${
-												i < Math.floor(product.rating) ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'
+												i < Math.floor(product?.rating) ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'
 											}`}
 										/>
 									))}
-									<span className="text-lg font-semibold ml-2">{product.rating}</span>
+									<span className="text-lg font-semibold ml-2">{product?.rating}</span>
 								</div>
-								<span className="text-gray-600">({product.reviews} reseñas)</span>
+								<span className="text-gray-600">({product?.reviews} reseñas)</span>
 							</div>
 						</div>
 
 						{/* Price */}
 						<div className="space-y-2">
 							<div className="flex items-center space-x-4">
-								<span className="text-4xl font-bold text-orange-600">{product.price}</span>
-								<span className="text-2xl text-gray-500 line-through">{product.originalPrice}</span>
+								<span className="text-4xl font-bold text-orange-600">{product?.price}</span>
+								<span className="text-2xl text-gray-500 line-through">{String(product?.originalPrice)}</span>
 							</div>
 							<div className="text-green-600 font-semibold">
-								¡Ahorras ${Number.parseInt(product.originalPrice.slice(1)) - Number.parseInt(product.price.slice(1))}!
+								¡Ahorras ${Number(String(product?.originalPrice).slice(1)) - Number(String(product?.price).slice(1))}!
 							</div>
 							<div className="text-sm text-gray-600">
-								o 12 cuotas sin interés de ${Math.round(Number.parseInt(product.price.slice(1)) / 12)}
+								o 12 cuotas sin interés de ${Math.round(Number(String(product?.price).slice(1)) / 12)}
 							</div>
 						</div>
 
 						{/* Stock Status */}
 						<div className="flex items-center space-x-2">
-							{product.inStock ? (
+							{product?.inStock ? (
 								<>
 									<Check className="w-5 h-5 text-green-500" />
-									<span className="text-green-600 font-semibold">En stock ({product.stockCount} disponibles)</span>
+									<span className="text-green-600 font-semibold">En stock ({product?.stockCount} disponibles)</span>
 								</>
 							) : (
 								<span className="text-red-600 font-semibold">Agotado</span>
@@ -124,7 +121,7 @@ export default function ProductDetailPage({ producto }: any) {
 						<div>
 							<h3 className="font-semibold mb-3">Color: Titanio Azul</h3>
 							<div className="flex space-x-3">
-								{product.colors.map((color, index) => (
+								{product?.colors.map((color, index) => (
 									<button
 										key={index}
 										className={`w-12 h-12 rounded-full border-2 ${
@@ -152,7 +149,7 @@ export default function ProductDetailPage({ producto }: any) {
 						<div>
 							<h3 className="font-semibold mb-3">Almacenamiento</h3>
 							<div className="grid grid-cols-2 gap-3">
-								{product.storage.map((option, index) => (
+								{product?.storage.map((option, index) => (
 									<button
 										key={index}
 										className={`p-3 border rounded-lg text-center ${
@@ -207,15 +204,15 @@ export default function ProductDetailPage({ producto }: any) {
 						<div className="space-y-3 pt-6 border-t">
 							<div className="flex items-center space-x-3">
 								<Truck className="w-5 h-5 text-green-600" />
-								<span className="text-sm">{product.shipping}</span>
+								<span className="text-sm">{product?.shipping}</span>
 							</div>
 							<div className="flex items-center space-x-3">
 								<Shield className="w-5 h-5 text-blue-600" />
-								<span className="text-sm">{product.warranty}</span>
+								<span className="text-sm">{product?.warranty}</span>
 							</div>
 							<div className="flex items-center space-x-3">
 								<RotateCcw className="w-5 h-5 text-purple-600" />
-								<span className="text-sm">{product.returns}</span>
+								<span className="text-sm">{product?.returns}</span>
 							</div>
 						</div>
 					</div>
@@ -228,11 +225,11 @@ export default function ProductDetailPage({ producto }: any) {
 							<Card>
 								<CardContent className="p-8">
 									<h3 className="text-2xl font-bold mb-6">Descripción del Producto</h3>
-									<p className="text-gray-700 text-lg leading-relaxed mb-6">{product.description}</p>
+									<p className="text-gray-700 text-lg leading-relaxed mb-6">{product?.description}</p>
 
 									<h4 className="text-xl font-semibold mb-4">Características Principales</h4>
 									<ul className="space-y-3">
-										{product.features.map((feature, index) => (
+										{product?.features.map((feature, index) => (
 											<li key={index} className="flex items-start space-x-3">
 												<Check className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
 												<span className="text-gray-700">{feature}</span>
@@ -248,10 +245,10 @@ export default function ProductDetailPage({ producto }: any) {
 								<CardContent className="p-8">
 									<h3 className="text-2xl font-bold mb-6">Especificaciones Técnicas</h3>
 									<div className="grid md:grid-cols-2 gap-6">
-										{Object.entries(product.specifications).map(([key, value], index) => (
+										{Object.entries(product?.specifications).map(([key, value], index) => (
 											<div key={index} className="flex justify-between py-3 border-b border-gray-200">
 												<span className="font-semibold text-gray-900">{key}</span>
-												<span className="text-gray-700">{value}</span>
+												<span className="text-gray-700">{String(value)}</span>
 											</div>
 										))}
 									</div>
@@ -259,30 +256,21 @@ export default function ProductDetailPage({ producto }: any) {
 							</Card>
 						</TabsContent>
 
-            <TabsContent value="specifications" className="mt-8">
-              <Card>
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-6">
-                    Especificaciones Técnicas
-                  </h3>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    {Object.entries(product.specifications).map(
-                      ([key, value], index) => (
-                        <div
-                          key={index}
-                          className="flex justify-between py-3 border-b border-gray-200"
-                        >
-                          <span className="font-semibold text-gray-900">
-                            {key}
-                          </span>
-                          <span className="text-gray-700">{String(value)}</span>
-                        </div>
-                      )
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
+						<TabsContent value="specifications" className="mt-8">
+							<Card>
+								<CardContent className="p-8">
+									<h3 className="text-2xl font-bold mb-6">Especificaciones Técnicas</h3>
+									<div className="grid md:grid-cols-2 gap-6">
+										{Object.entries(product?.specifications).map(([key, value], index) => (
+											<div key={index} className="flex justify-between py-3 border-b border-gray-200">
+												<span className="font-semibold text-gray-900">{key}</span>
+												<span className="text-gray-700">{String(value)}</span>
+											</div>
+										))}
+									</div>
+								</CardContent>
+							</Card>
+						</TabsContent>
 
 						<TabsContent value="reviews" className="mt-8">
 							<Card>
@@ -292,18 +280,18 @@ export default function ProductDetailPage({ producto }: any) {
 										{/* Review Summary */}
 										<div className="flex items-center space-x-8 pb-6 border-b">
 											<div className="text-center">
-												<div className="text-4xl font-bold">{product.rating}</div>
+												<div className="text-4xl font-bold">{product?.rating}</div>
 												<div className="flex justify-center mb-2">
 													{[...Array(5)].map((_, i) => (
 														<Star
 															key={i}
 															className={`w-5 h-5 ${
-																i < Math.floor(product.rating) ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'
+																i < Math.floor(product?.rating) ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'
 															}`}
 														/>
 													))}
 												</div>
-												<div className="text-sm text-gray-600">{product.reviews} reseñas</div>
+												<div className="text-sm text-gray-600">{product?.reviews} reseñas</div>
 											</div>
 											<div className="flex-1">
 												{[5, 4, 3, 2, 1].map((stars) => (
@@ -392,31 +380,31 @@ export default function ProductDetailPage({ producto }: any) {
 								<CardContent className="p-4">
 									<div className="aspect-square mb-4 bg-gray-100 rounded-lg overflow-hidden">
 										<img
-											src={product.image || '/placeholder.svg'}
-											alt={product.name}
+											src={product?.image || '/logo.svg'}
+											alt={product?.name}
 											width={200}
 											height={200}
 											className="w-full h-full object-cover group-hover:scale-105 transition-transform"
 										/>
 									</div>
-									<h3 className="font-semibold mb-2 line-clamp-2">{product.name}</h3>
+									<h3 className="font-semibold mb-2 line-clamp-2">{product?.name}</h3>
 									<div className="flex items-center space-x-1 mb-2">
 										{[...Array(5)].map((_, i) => (
 											<Star
 												key={i}
 												className={`w-3 h-3 ${
-													i < Math.floor(product.rating) ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'
+													i < Math.floor(product?.rating) ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'
 												}`}
 											/>
 										))}
-										<span className="text-xs text-gray-600 ml-1">({product.reviews})</span>
+										<span className="text-xs text-gray-600 ml-1">({product?.reviews})</span>
 									</div>
 									<div className="flex items-center space-x-2 mb-4">
-										<span className="text-lg font-bold text-orange-600">{product.price}</span>
-										<span className="text-sm text-gray-500 line-through">{product.originalPrice}</span>
+										<span className="text-lg font-bold text-orange-600">{product?.price}</span>
+										<span className="text-sm text-gray-500 line-through">{product?.originalPrice}</span>
 									</div>
 									<Button className="w-full bg-orange-600 hover:bg-orange-700">
-										<a href={`/producto/${product?.id?.toString()}`} className="block w-full text-white">
+										<a href={`/producto/${producto?.id?.toString()}`} className="block w-full text-white">
 											Ver Producto
 										</a>
 									</Button>

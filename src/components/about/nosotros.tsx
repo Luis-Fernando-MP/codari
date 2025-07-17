@@ -9,7 +9,7 @@ export function TeamMember({ member }: any) {
 				<div className="text-center mb-6">
 					<div className="w-32 h-32 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-primary via-[#FB6300] to-primary mb-4">
 						<img
-							src={member.image ?? '/placeholder.svg?height=128&width=128'}
+							src={member.image ?? '/logo.svg?height=128&width=128'}
 							alt={member.name}
 							width={128}
 							height={128}
@@ -170,7 +170,9 @@ export function CultureCompany() {
 									<Lightbulb className="w-8 h-8 text-blue-600" />
 								</div>
 								<h3 className="text-xl font-bold mb-3">Innovación</h3>
-								<p className="text-gray-600">Fomentamos la creatividad y la experimentación con nuevas tecnologías y metodologías.</p>
+								<p className="text-gray-600">
+									Fomentamos la creatividad y la experimentación con nuevas tecnologías y metodologías.
+								</p>
 							</CardContent>
 						</Card>
 

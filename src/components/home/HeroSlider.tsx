@@ -35,7 +35,7 @@ const DotsNavigation = ({ slides, currentSlide, goToSlide, progress }) => (
 					)}
 
 					<img
-						src={slide.image ?? '/placeholder.svg'}
+						src={slide.image ?? '/logo.svg'}
 						alt={slide.category}
 						className={`w-full h-full object-cover rounded-full ${isActive ? 'border-background scale-105' : 'border-white/40'}`}
 					/>
@@ -92,7 +92,7 @@ const Slide = ({ slide, isActive }) => (
 				<div className="flex items-center justify-center">
 					<div className="max-w-[350px] max-h-[350px] rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500">
 						<img
-							src={slide.image ?? '/placeholder.svg'}
+							src={slide.image ?? '/logo.svg'}
 							alt={slide.category}
 							width={400}
 							height={350}
