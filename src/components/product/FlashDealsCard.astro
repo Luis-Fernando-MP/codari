@@ -3,7 +3,10 @@ import { Badge } from '../ui/badge'
 import { Button } from '../ui/button'
 import { Card, CardContent } from '../ui/card'
 
+
+
 interface Product {
+	id: string 
 	timeLeft: string
 	image: string
 	name: string
@@ -54,7 +57,11 @@ const { product, index } = Astro.props
 			</div>
 			<div class="text-sm text-green-600">{product.installments}</div>
 			<div class="text-sm text-primary">Solo {product.stock} disponibles</div>
-			<Button className="bg-primary text-sm sm:text-base px-4 sm:px-8 py-2 sm:py-3 w-full">¡Comprar Ahora!</Button>
+			<a href={`/producto/${product.id.toString()}`}>
+  				<Button className="bg-primary text-sm sm:text-base px-4 sm:px-8 py-2 sm:py-3 w-full">
+    				¡Comprar Ahora!
+  				</Button>
+			</a>
 		</div>
 	</CardContent>
 </Card>
