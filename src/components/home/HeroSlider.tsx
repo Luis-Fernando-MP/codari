@@ -84,9 +84,11 @@ const Slide = ({ slide, isActive }) => (
 					<p className="text-sm sm:text-lg md:text-xl text-primary-foreground/90">{slide.description}</p>
 					<div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4 mt-4 sm:mt-6 justify-center md:justify-start">
 						<span className="text-xl sm:text-2xl font-bold text-primary-foreground drop-shadow">{slide.price}</span>
-						<Button className="bg-yellow-300 cursor-pointer font-bold px-4 sm:px-6 py-2 sm:py-3 rounded-bl-sm shadow-xl transition-all transform scale-100 hover:scale-105 text-black hover:text-white">
-							{slide.buttonText}
-						</Button>
+						<a href={`/producto/${slide.id}`}>
+							<Button className="bg-yellow-300 cursor-pointer font-bold px-4 sm:px-6 py-2 sm:py-3 rounded-bl-sm shadow-xl transition-all transform scale-100 hover:scale-105 text-black hover:text-white">
+								{slide.buttonText}
+							</Button>
+						</a>
 					</div>
 				</div>
 				<div className="flex items-center justify-center">
