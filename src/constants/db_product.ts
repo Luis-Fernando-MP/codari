@@ -1,132 +1,140 @@
 export const categories = [
-	{
-		id: 'laptops',
-		title: 'Laptops Gaming',
-		icon: '🎮',
-		productCount: 156,
-		image: '/productos/categorias/cat1.png?height=100&width=100'
-	},
-	{
-		id: 'smartphones',
-		title: 'Smartphones',
-		icon: '📱',
-		productCount: 234,
-		image: '/productos/categorias/cat2.png?height=100&width=100'
-	},
-	{
-		id: 'audifonos',
-		title: 'Audífonos',
-		icon: '🎧',
-		productCount: 89,
-		image: '/productos/categorias/cat3.png?height=100&width=100'
-	},
-	{
-		id: 'televisores',
-		title: 'Televisores',
-		icon: '📺',
-		productCount: 67,
-		image: '/productos/categorias/cat4.png?height=100&width=100'
-	},
-	{
-		id: 'lsmartwatches',
-		title: 'Smartwatches',
-		icon: '⌚',
-		productCount: 45,
-		image: '/productos/categorias/cat5.png?height=100&width=100'
-	},
-	{
-		id: 'sillas',
-		title: 'Sillas',
-		icon: '🔌',
-		productCount: 178,
-		image: '/productos/categorias/cat6.png?height=100&width=100'
-	}
-]
+  {
+    id: "laptops",
+    title: "Laptops Gaming",
+    icon: "🎮",
+    productCount: 156,
+    image: "/productos/categorias/cat1.png?height=100&width=100",
+  },
+  {
+    id: "smartphones",
+    title: "Smartphones",
+    icon: "📱",
+    productCount: 234,
+    image: "/productos/categorias/cat2.png?height=100&width=100",
+  },
+  {
+    id: "audifonos",
+    title: "Audífonos",
+    icon: "🎧",
+    productCount: 89,
+    image: "/productos/categorias/cat3.png?height=100&width=100",
+  },
+  {
+    id: "televisores",
+    title: "Televisores",
+    icon: "📺",
+    productCount: 67,
+    image: "/productos/categorias/cat4.png?height=100&width=100",
+  },
+  {
+    id: "lsmartwatches",
+    title: "Smartwatches",
+    icon: "⌚",
+    productCount: 45,
+    image: "/productos/categorias/cat5.png?height=100&width=100",
+  },
+  {
+    id: "sillas",
+    title: "Sillas",
+    icon: "🔌",
+    productCount: 178,
+    image: "/productos/categorias/cat6.png?height=100&width=100",
+  },
+];
 
 export const brandLogos = [
-	{ id: 'log', name: 'Logitech', src: '/productos/marcas/logo1.png' },
-	{ id: 'sam', name: 'Samsung', src: '/productos/marcas/logo2.png' },
-	{ id: 'hyp', name: 'HyperX', src: '/productos/marcas/logo3.png' },
-	{ id: 'asu', name: 'Asus', src: '/productos/marcas/logo4.png' }
-]
+  { id: "log", name: "Logitech", src: "/productos/marcas/logo1.png" },
+  { id: "sam", name: "Samsung", src: "/productos/marcas/logo2.png" },
+  { id: "hyp", name: "HyperX", src: "/productos/marcas/logo3.png" },
+  { id: "asu", name: "Asus", src: "/productos/marcas/logo4.png" },
+];
 
 export const relatedProducts = [
-	{
-		name: 'iPhone 15 Pro 128GB',
-		price: '$999',
-		originalPrice: '$1,099',
-		rating: 4.7,
-		reviews: 1234,
-		image: '/placeholder.svg?height=200&width=200'
-	},
-	{
-		name: 'AirPods Pro (2ª gen)',
-		price: '$249',
-		originalPrice: '$279',
-		rating: 4.9,
-		reviews: 5678,
-		image: '/placeholder.svg?height=200&width=200'
-	},
-	{
-		name: 'MagSafe Charger',
-		price: '$39',
-		originalPrice: '$49',
-		rating: 4.5,
-		reviews: 890,
-		image: '/placeholder.svg?height=200&width=200'
-	},
-	{
-		name: 'iPhone 15 Pro Max Case',
-		price: '$59',
-		originalPrice: '$79',
-		rating: 4.6,
-		reviews: 456,
-		image: '/placeholder.svg?height=200&width=200'
-	}
-]
+  {
+    id: "apple-iphone15pro-128",
+    name: "iPhone 15 Pro 128GB",
+    price: "$999",
+    originalPrice: "$1,099",
+    rating: 4.7,
+    reviews: 1234,
+    image: "/placeholder.svg?height=200&width=200",
+  },
+  {
+    id: "apple-airpods-pro-2gen",
+    name: "AirPods Pro (2ª gen)",
+    price: "$249",
+    originalPrice: "$279",
+    rating: 4.9,
+    reviews: 5678,
+    image: "/placeholder.svg?height=200&width=200",
+  },
+  {
+    id: "apple-magsafe-charger",
+    name: "MagSafe Charger",
+    price: "$39",
+    originalPrice: "$49",
+    rating: 4.5,
+    reviews: 890,
+    image: "/placeholder.svg?height=200&width=200",
+  },
+  {
+    id: "apple-iphone15promax-case",
+    name: "iPhone 15 Pro Max Case",
+    price: "$59",
+    originalPrice: "$79",
+    rating: 4.6,
+    reviews: 456,
+    image: "/placeholder.svg?height=200&width=200",
+  },
+];
 
 export const slides = [
-	{
-		id: 1,
-		category: 'iPhone 15 Pro Max',
-		title: 'TECNOLOGÍA\nQUE IMPACTA',
-		description: 'Explora el futuro con nuestros productos de última generación que transforman tu experiencia digital.',
-		price: 's/ 4,999.00',
-		image: '/inicio/head.png?height=500&width=600',
-		buttonText: 'Ver Detalles'
-	},
-	{
-		id: 2,
-		category: 'MacBook Pro M3',
-		title: 'POTENCIA\nSIN LÍMITES',
-		description: 'Experimenta el rendimiento profesional con el nuevo chip M3 que revoluciona tu productividad.',
-		price: 's/ 5,999.00',
-		image: '/inicio/head2.png?height=500&width=600',
-		buttonText: 'Descubrir Más'
-	},
-	{
-		id: 3,
-		category: 'AirPods Pro',
-		title: 'SONIDO\nINMERSIVO',
-		description: 'Sumérgete en una experiencia auditiva única con cancelación de ruido activa de nueva generación.',
-		price: 's/ 999.00',
-		image: '/inicio/head3.png?height=500&width=600',
-		buttonText: 'Escuchar Ahora'
-	},
-	{
-		id: 4,
-		category: 'Apple Watch Ultra',
-		title: 'AVENTURA\nSIN FRONTERAS',
-		description: 'El reloj más resistente y avanzado para los que buscan superar todos los límites.',
-		price: 's/ 600.00',
-		image: '/inicio/head4.png?height=500&width=600',
-		buttonText: 'Explorar'
-	}
-]
+  {
+    id: 1,
+    category: "iPhone 15 Pro Max",
+    title: "TECNOLOGÍA\nQUE IMPACTA",
+    description:
+      "Explora el futuro con nuestros productos de última generación que transforman tu experiencia digital.",
+    price: "s/ 4,999.00",
+    image: "/inicio/head.png?height=500&width=600",
+    buttonText: "Ver Detalles",
+  },
+  {
+    id: 2,
+    category: "MacBook Pro M3",
+    title: "POTENCIA\nSIN LÍMITES",
+    description:
+      "Experimenta el rendimiento profesional con el nuevo chip M3 que revoluciona tu productividad.",
+    price: "s/ 5,999.00",
+    image: "/inicio/head2.png?height=500&width=600",
+    buttonText: "Descubrir Más",
+  },
+  {
+    id: 3,
+    category: "AirPods Pro",
+    title: "SONIDO\nINMERSIVO",
+    description:
+      "Sumérgete en una experiencia auditiva única con cancelación de ruido activa de nueva generación.",
+    price: "s/ 999.00",
+    image: "/inicio/head3.png?height=500&width=600",
+    buttonText: "Escuchar Ahora",
+  },
+  {
+    id: 4,
+    category: "Apple Watch Ultra",
+    title: "AVENTURA\nSIN FRONTERAS",
+    description:
+      "El reloj más resistente y avanzado para los que buscan superar todos los límites.",
+    price: "s/ 600.00",
+    image: "/inicio/head4.png?height=500&width=600",
+    buttonText: "Explorar",
+  },
+];
 
 export const laptops = [
   {
-    id: "laptol-1",
+    id: "asus-rog-strix-i9-4060",
     name: "Laptop Asus Rog Strix Intel Core i9-14900Hx, 16GB, 1Tb, 16'' FHD,Video RTX 4060, Win 11 Pro",
     price: "S/ 1,469",
     originalPrice: "S/ 1,699",
@@ -172,7 +180,7 @@ export const laptops = [
     returns: ["Devolución en 15 días", "Cambio por defecto de fábrica"],
   },
   {
-    id: "laptol-2",
+    id: "hp-victus-i7-3050",
     name: "Gamer HP Intel Core i7 RTX 3050 16GB 512 GB SSD Victus 12va Gen 15.6'' 15-fa0007la W11",
     price: "S/ 1,499",
     originalPrice: "S/ 1,599",
@@ -219,7 +227,7 @@ export const laptops = [
     returns: ["Devolución en 15 días", "Cambio por defecto de fábrica"],
   },
   {
-    id: "laptol-3",
+    id: "acer-nitro-v15-i7-4050",
     name: "LAPTOP GAMER ACER NITRO V15 ANV15-51-711U i7 13° GEN. 15.6 FHD IPS 144Hz 16GB 512GB RTX4050 6GB W11",
     price: "S/ 1,549",
     originalPrice: "S/ 1,549",
@@ -265,7 +273,7 @@ export const laptops = [
     returns: ["Devolución en 15 días", "Cambio por defecto de fábrica"],
   },
   {
-    id: "laptol-4",
+    id: "acer-nitro-v15-i5-3050",
     name: "ACER Nitro V15 ANV15-51-56GH Ci5 13420H/ 8Gb Ram/ 512GB SSD/ RTX 3050 6GB/ 15.6”FHD W.11 - CSI",
     price: "S/ 1,469",
     originalPrice: "S/ 1,799",
@@ -315,7 +323,7 @@ export const laptops = [
 
 export const audifonos = [
   {
-    id: "audifono-1",
+    id: "redragon-zeus-h510-pro-wl",
     name: "Audifono Redragon Zeus X PRO RGB H510-PRO-WL Wireless BLACK",
     price: "s/ 89.99",
     originalPrice: "s/ 119.99",
@@ -357,7 +365,7 @@ export const audifonos = [
     returns: ["Devolución en 15 días", "Cambio por defecto de fábrica"],
   },
   {
-    id: "audifono-2",
+    id: "haylou-s30pro-white",
     name: "Audífonos Bluetooth Haylou S30 PRO ANC Hybrid Hi-Res - Blanco",
     price: "s/ 179.99",
     originalPrice: "s/ 199.99",
@@ -393,7 +401,7 @@ export const audifonos = [
     returns: ["Devolución en 15 días", "Cambio por defecto de fábrica"],
   },
   {
-    id: "audifono-3",
+    id: "haylou-s30pro-black",
     name: "Audífonos Bluetooth Haylou S30 PRO ANC Hybrid Hi-Res - Negro",
     price: "s/ 129.99",
     originalPrice: "s/ 149.99",
@@ -433,7 +441,7 @@ export const audifonos = [
     returns: ["Devolución en 15 días", "Cambio por defecto de fábrica"],
   },
   {
-    id: "audifono-4",
+    id: "combat-gamer-negroazul",
     name: "AUDIFONOS GAMER COMBAT NEGROAZUL",
     price: "s/ 149.99",
     originalPrice: "s/ 169.99",
@@ -472,7 +480,7 @@ export const audifonos = [
     returns: ["Devolución en 15 días", "Cambio por defecto de fábrica"],
   },
   {
-    id: "audifono-5",
+    id: "corsair-hs80-rgb-wireless",
     name: "Corsair HS80 RGB Wireless",
     price: "s/ 149.99",
     originalPrice: "s/ 179.99",
@@ -509,7 +517,7 @@ export const audifonos = [
     returns: ["Devolución en 15 días", "Cambio por defecto de fábrica"],
   },
   {
-    id: "audifono-6",
+    id: "haylou-s30pro-ipx5",
     name: "Audífonos Bluetooth Haylou S30 PRO ANC Hybrid Hi-Res",
     price: "s/ 199.99",
     originalPrice: "s/ 229.99",
@@ -548,7 +556,7 @@ export const audifonos = [
 
 export const televisores = [
   {
-    id: "televisor-1",
+    id: "samsung-qn90a-neo-qled-55",
     name: 'Samsung OLED 55" QN90A Neo QLED 4K',
     price: "s/ 1,299.99",
     originalPrice: "s/ 1,499.99",
@@ -592,7 +600,7 @@ export const televisores = [
     returns: ["Devolución en 15 días", "Cambio por defecto de fábrica"],
   },
   {
-    id: "televisor-2",
+    id: "lg-c1-oled-65",
     name: 'LG OLED 65" C1 Series 4K Smart TV',
     price: "s/ 1,799.99",
     originalPrice: "s/ 1,999.99",
@@ -631,7 +639,7 @@ export const televisores = [
     returns: ["Devolución en 15 días", "Cambio por defecto de fábrica"],
   },
   {
-    id: "televisor-3",
+    id: "sony-a80j-oled-55",
     name: 'Sony OLED 55" A80J Bravia XR',
     price: "s/ 1,399.99",
     originalPrice: "s/ 1,599.99",
@@ -671,7 +679,7 @@ export const televisores = [
     returns: ["Devolución en 15 días", "Cambio por defecto de fábrica"],
   },
   {
-    id: "televisor-4",
+    id: "tcl-c825-qled-50",
     name: 'TCL QLED 50" C825 Mini LED 4K',
     price: "s/ 899.99",
     originalPrice: "s/ 1,099.99",
@@ -704,7 +712,7 @@ export const televisores = [
     returns: ["Devolución en 15 días", "Cambio por defecto de fábrica"],
   },
   {
-    id: "televisor-5",
+    id: "samsung-q80a-qled-55",
     name: 'samsung QLED 55" Q80A 4K Smart TV',
     price: "s/ 999.99",
     originalPrice: "s/ 1,199.99",
@@ -747,7 +755,7 @@ export const televisores = [
     returns: ["Devolución en 15 días", "Cambio por defecto de fábrica"],
   },
   {
-    id: "televisor-6",
+    id: "samsung-qn85a-qled-65",
     name: 'samsung QLED 65" QN85A 4K Smart TV',
     price: "s/ 1,199.99",
     originalPrice: "s/ 1,399.99",
@@ -788,7 +796,7 @@ export const televisores = [
 
 export const Sillas = [
   {
-    id: "silla-1",
+    id: "codari-gamer-155-masaje",
     name: "Silla Gamer Reclinación 155° con Posapies y Masajeador",
     price: "s/ 429.99",
     originalPrice: "s/ 449.99",
@@ -829,7 +837,7 @@ export const Sillas = [
     returns: ["Devolución en 15 días", "Cambio por defecto de fábrica"],
   },
   {
-    id: "silla-2",
+    id: "codari-gamer-155-ergonomica",
     name: "Silla Gamer Reclinación 155° con Posapies y Masageador",
     price: "s/ 379.99",
     originalPrice: "s/ 429.99",
@@ -862,7 +870,7 @@ export const Sillas = [
     returns: ["Devolución en 15 días", "Cambio por defecto de fábrica"],
   },
   {
-    id: "silla-3",
+    id: "kuzler-rik-101r-rosa",
     name: "Silla Gamer Kuzler Con Masajeador Lumbar Color Rosa RIK-101R",
     price: "s/ 449.99",
     originalPrice: "s/ 499.99",
@@ -901,7 +909,7 @@ export const Sillas = [
     returns: ["Devolución en 15 días", "Cambio por defecto de fábrica"],
   },
   {
-    id: "silla-4",
+    id: "kuzler-negra-metalica",
     name: "Silla Gamer Kuzler Negra con masajeador lumbar reposapiés y base metálica",
     price: "s/ 199.99",
     originalPrice: "s/ 249.99",
@@ -943,7 +951,7 @@ export const Sillas = [
     returns: ["Devolución en 15 días", "Cambio por defecto de fábrica"],
   },
   {
-    id: "silla-5",
+    id: "extingtion-sapp-blanco",
     name: "Silla Gamer Extingtion Sapp Gamuza-Cuerina Color Blanco",
     price: "s/ 279.99",
     originalPrice: "s/ 329.99",
@@ -981,7 +989,7 @@ export const Sillas = [
     returns: ["Devolución en 15 días", "Cambio por defecto de fábrica"],
   },
   {
-    id: "silla-6",
+    id: "titan-rgb-135-blanco",
     name: "Silla Gamer Con Luces RGB Titan Con Masajeador Reposapiés 135° Blanco",
     price: "s/ 199.99",
     originalPrice: "s/ 229.99",
@@ -1027,10 +1035,9 @@ export const Sillas = [
   },
 ];
 
-
 export const flashDeals = [
   {
-    id: "lll5",
+    id: "lenovo-legion5-r5-512",
     name: 'Laptop Lenovo Legion 5, Amd Ryzen 5 5600H, 8GB DDR4, SSD 512Gb, 15.6" FHD ',
     price: "S/ 2500",
     originalPrice: "S/ 3000",
@@ -1073,7 +1080,7 @@ export const flashDeals = [
     returns: ["Devolución en 15 días", "Cambio por defecto de fábrica"],
   },
   {
-    id: "tgl6213",
+    id: "logitech-g213-rgb-black",
     name: "Teclado Gamer Marca Logitech G213 Prodigy Con Iluminación RGB, Black, Alámbrico - USB",
     price: "S/ 222.99",
     originalPrice: "S/ 249.99",
@@ -1108,7 +1115,7 @@ export const flashDeals = [
     returns: ["Devolución en 15 días", "Cambio por defecto de fábrica"],
   },
   {
-    id: "cgha06",
+    id: "halion-aries06-600w-black",
     name: "Case Gamer Halion Aries 06 Con Fuente de 600W, 4 LED-ARGB, Vidrio Templado, Black",
     price: "S/ 799.99",
     originalPrice: "S/ 899.99",
@@ -1145,11 +1152,11 @@ export const flashDeals = [
 
 export const patriasOffers = [
   {
-    id: "poi15",
+    id: "apple-iphone15promax-256",
     name: "iPhone 15 Pro Max 256GB",
     category: "CELULARES",
     price: 999,
-    originalPrice: 1299,
+    originalPrice: "1299",
     image: "/productos/patrias/iPhone-15-Pro-Max-256GB.png",
     discount: 23,
     brand: "Apple",
@@ -1188,11 +1195,11 @@ export const patriasOffers = [
     returns: ["Devolución en 30 días", "Cambio por defecto de fábrica"],
   },
   {
-    id: "poi16",
+    id: "apple-macbookair-m2-512",
     name: "MacBook Air M2 512GB",
     category: "LAPTOPS",
     price: 1199,
-    originalPrice: 1499,
+    originalPrice: "1499",
     image: "/productos/patrias/MacBook-Air-M2-512GB.png",
     discount: 20,
     brand: "Apple",
@@ -1231,11 +1238,11 @@ export const patriasOffers = [
     returns: ["Devolución en 30 días", "Cambio por defecto de fábrica"],
   },
   {
-    id: "poi17",
+    id: "samsung-galaxy-s24-ultra",
     name: "Samsung Galaxy S24 Ultra",
     category: "CELULARES",
     price: 899,
-    originalPrice: 1199,
+    originalPrice: "1199",
     image: "/productos/patrias/Samsung-Galaxy-S24-Ultra.png",
     discount: 25,
     brand: "Samsung",
@@ -1274,11 +1281,11 @@ export const patriasOffers = [
     returns: ["Devolución en 30 días", "Cambio por defecto de fábrica"],
   },
   {
-    id: "poi18",
+    id: "sony-wh1000xm5-headphones",
     name: "Sony WH-1000XM5 Headphones",
     category: "AUDIO",
     price: 299,
-    originalPrice: 399,
+    originalPrice: "399",
     image: "/productos/patrias/Sony-WH-1000XM5-Headphones.png",
     discount: 25,
     brand: "Sony",
@@ -1317,11 +1324,11 @@ export const patriasOffers = [
 
 export const products = [
   {
-    id: "arz614",
+    id: "asus-rog-zephyrus-g14",
     name: 'ASUS ROG Zephyrus G14 14"',
     category: "LAPTOPS",
     price: 5000,
-    originalPrice: 5099,
+    originalPrice: "5099",
     image: "/productos/header_ofert1.png?height=300&width=300",
     discount: 2,
     brand: "ASUS",
@@ -1360,11 +1367,11 @@ export const products = [
     returns: ["Devolución en 15 días", "Cambio por defecto de fábrica"],
   },
   {
-    id: "vg15",
+    id: "hp-victus-gaming-156",
     name: "VICTUS Gaming 15.6 FHD",
     category: "LAPTOPS",
     price: 5400,
-    originalPrice: 5700,
+    originalPrice: "5700",
     image: "/productos/header_ofert2.png?height=300&width=300",
     discount: 5,
     brand: "HP",
@@ -1403,11 +1410,11 @@ export const products = [
     returns: ["Devolución en 15 días", "Cambio por defecto de fábrica"],
   },
   {
-    id: "n5g",
+    id: "acer-nitro5-gaming-156",
     name: "NITRO 5 Gaming 15.6 FHD",
     category: "LAPTOPS",
     price: 4000,
-    originalPrice: 4500,
+    originalPrice: "4500",
     image: "/productos/header_ofert3.png?height=300&width=300",
     discount: 11,
     brand: "Acer",
@@ -1446,11 +1453,11 @@ export const products = [
     returns: ["Devolución en 15 días", "Cambio por defecto de fábrica"],
   },
   {
-    id: "pcg5",
+    id: "amd-ryzen5-5600x-pcgamer",
     name: "PC Gamer AMD Ryzen 5 5600X",
     category: "PC GAMING",
     price: 3200,
-    originalPrice: 4000,
+    originalPrice: "4000",
     image: "/productos/headofert1.png?height=300&width=300",
     discount: 20,
     brand: "AMD",
@@ -1483,11 +1490,11 @@ export const products = [
     returns: ["Devolución en 15 días", "Cambio por defecto de fábrica"],
   },
   {
-    id: "sgdr",
+    id: "dxracer-racing-series",
     name: "Silla Gaming DXRacer Racing Series",
     category: "SILLAS GAMING",
     price: 399,
-    originalPrice: 499,
+    originalPrice: "499",
     image: "/productos/sillas/silla3.png?height=300&width=300",
     discount: 20,
     brand: "DXRacer",
@@ -1520,11 +1527,11 @@ export const products = [
     returns: ["Devolución en 15 días", "Cambio por defecto de fábrica"],
   },
   {
-    id: "sgdf",
+    id: "dxracer-formula-series",
     name: "Silla Gaming DXRacer Formula Series",
     category: "SILLAS GAMING",
     price: 79,
-    originalPrice: 99,
+    originalPrice: "99",
     image: "/productos/sillas/silla1.png?height=300&width=300",
     discount: 20,
     brand: "DXRacer",
@@ -1555,11 +1562,11 @@ export const products = [
 
 export const recommendedProducts = [
   {
-    id: "cpsx1",
+    id: "xiaomi-redmi-note12pro",
     name: "Smartphone Xiaomi Redmi Note 12 Pro",
     category: "SMARTPHONES",
     price: 299,
-    originalPrice: 349,
+    originalPrice: "349",
     image: "/productos/audifonos/audifono1.png?height=150&width=150",
     discount: 14,
     brand: "Xiaomi",
@@ -1592,11 +1599,11 @@ export const recommendedProducts = [
     returns: ["Devolución en 30 días", "Cambio por defecto"],
   },
   {
-    id: "cpsx2",
+    id: "belkin-boostcharge-wireless",
     name: "Carga Inalámbrica Belkin BoostCharge",
     category: "ACCESORIOS",
     price: 199,
-    originalPrice: 249,
+    originalPrice: "249",
     image: "/productos/audifonos/audifono2.png?height=150&width=150",
     discount: 20,
     brand: "Belkin",
@@ -1629,11 +1636,11 @@ export const recommendedProducts = [
     returns: ["Devolución en 30 días", "Cambio por defecto"],
   },
   {
-    id: "cpsx3",
+    id: "hp-victus-gaming-156-recommended",
     name: "Laptop HP Victus Gaming 15.6",
     category: "LAPTOPS",
     price: 899,
-    originalPrice: 999,
+    originalPrice: "999",
     image: "/productos/audifonos/audifono3.png?height=150&width=150",
     discount: 10,
     brand: "HP",
@@ -1666,11 +1673,11 @@ export const recommendedProducts = [
     returns: ["Devolución en 30 días", "Cambio por defecto"],
   },
   {
-    id: "cpsx4",
+    id: "capcom-resident-evil4-4k",
     name: "Juego de 4K Resident Evil 4",
     category: "VIDEOJUEGOS",
     price: 1099,
-    originalPrice: 1299,
+    originalPrice: "1299",
     image: "/productos/audifonos/audifono4.png?height=150&width=150",
     discount: 15,
     brand: "Capcom",
@@ -1703,11 +1710,11 @@ export const recommendedProducts = [
     returns: ["Devolución en 30 días", "Cambio por defecto"],
   },
   {
-    id: "cpsx5",
+    id: "targus-citygear-mochila-1",
     name: "Mochila Targus CityGear",
     category: "MOCHILAS",
     price: 49,
-    originalPrice: 59,
+    originalPrice: "59",
     image: "/productos/audifonos/audifono5.png?height=150&width=150",
     discount: 17,
     brand: "Targus",
@@ -1740,11 +1747,11 @@ export const recommendedProducts = [
     returns: ["Devolución en 30 días", "Cambio por defecto"],
   },
   {
-    id: "cpsx6",
+    id: "targus-citygear-mochila-2",
     name: "Mochila Targus CityGear",
     category: "MOCHILAS",
     price: 39,
-    originalPrice: 59,
+    originalPrice: "59",
     image: "/productos/audifonos/audifono6.png?height=150&width=150",
     discount: 34,
     brand: "Targus",
