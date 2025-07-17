@@ -99,10 +99,7 @@ import { patriasOffers } from '@/constants/db_product'
 
 								{/* Action Button */}
 								<Button className="w-full bg-primary hover:bg-red-700 text-white font-bold py-3 text-lg">
-									<a
-										href={`/producto/${product.name.toLowerCase().replace(/\s+/g, '-')}`}
-										class="flex items-center text-base justify-center w-full text-white"
-									>
+									<a href={`/producto/${product.id}`} class="flex items-center text-base justify-center w-full text-white">
 										¡Comprar ahora!
 									</a>
 								</Button>

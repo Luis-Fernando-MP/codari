@@ -167,7 +167,7 @@ export default function ImprovedCarousel({
 
 										{/* Add to Cart Button */}
 										<Button className="w-full mt-3 bg-primary hover:bg-red-700 text-sm" aria-label="Agregar al carrito">
-											Agregar al Carrito
+											<a href={`/producto/${product?.id?.toString()}`}>Ver más detalle</a>
 										</Button>
 									</div>
 								</CardContent>

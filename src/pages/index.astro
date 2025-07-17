@@ -31,25 +31,27 @@ import { products, recommendedProducts } from '@/constants/db_product'
 				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 					{
 						products.map((product, index) => (
-							<Card key={index} className="group hover:shadow-lg transition-shadow">
-								<CardContent className="p-6">
-									<div class="aspect-square mb-4 bg-card rounded-lg overflow-hidden">
-										<img
-											src={product.image || '/placeholder.svg'}
-											alt={product.name}
-											width={300}
-											height={300}
-											class="w-full h-full object-cover group-hover:scale-105 transition-transform"
-										/>
-									</div>
-									<div class="text-xs text-gray-500 mb-2">{product.category}</div>
-									<h3 class="font-semibold mb-2 line-clamp-2">{product.name}</h3>
-									<div class="flex items-center space-x-2">
-										<span class="text-lg font-bold">S/.{product.price}</span>
-										<span class="text-sm text-gray-500 line-through">S/.{product.originalPrice}</span>
-									</div>
-								</CardContent>
-							</Card>
+							<a href={`/producto/${product?.id?.toString()}`}>
+								<Card key={index} className="group hover:shadow-lg transition-shadow">
+									<CardContent className="p-6">
+										<div class="aspect-square mb-4 bg-card rounded-lg overflow-hidden">
+											<img
+												src={product.image || '/placeholder.svg'}
+												alt={product.name}
+												width={300}
+												height={300}
+												class="w-full h-full object-cover group-hover:scale-105 transition-transform"
+											/>
+										</div>
+										<div class="text-xs text-gray-500 mb-2">{product.category}</div>
+										<h3 class="font-semibold mb-2 line-clamp-2">{product.name}</h3>
+										<div class="flex items-center space-x-2">
+											<span class="text-lg font-bold">S/.{product.price}</span>
+											<span class="text-sm text-gray-500 line-through">S/.{product.originalPrice}</span>
+										</div>
+									</CardContent>
+								</Card>
+							</a>
 						))
 					}
 				</div>
@@ -71,22 +73,24 @@ import { products, recommendedProducts } from '@/constants/db_product'
 				<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
 					{
 						recommendedProducts.map((item, index) => (
-							<Card key={index} className="group hover:shadow-lg transition-shadow">
-								<CardContent className="p-4 ">
-									<div class="aspect-square mb-3 bg-card rounded-lg">
-										<img
-											src={item.image}
-											alt={item.name}
-											width={150}
-											height={150}
-											class="w-full h-full object-cover rounded-lg"
-										/>
-									</div>
-									<div class="text-xs text-gray-500 mb-1">{item.category}</div>
-									<h3 class="text-sm font-medium mb-2 line-clamp-2">{item.name}</h3>
-									<div class="text-lg font-bold">S/.{item.price}</div>
-								</CardContent>
-							</Card>
+							<a href={`/producto/${item?.id?.toString()}`}>
+								<Card key={index} className="group hover:shadow-lg transition-shadow">
+									<CardContent className="p-4 ">
+										<div class="aspect-square mb-3 bg-card rounded-lg">
+											<img
+												src={item.image}
+												alt={item.name}
+												width={150}
+												height={150}
+												class="w-full h-full object-cover rounded-lg"
+											/>
+										</div>
+										<div class="text-xs text-gray-500 mb-1">{item.category}</div>
+										<h3 class="text-sm font-medium mb-2 line-clamp-2">{item.name}</h3>
+										<div class="text-lg font-bold">S/.{item.price}</div>
+									</CardContent>
+								</Card>
+							</a>
 						))
 					}
 				</div>

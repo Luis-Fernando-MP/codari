@@ -12,8 +12,6 @@ import CategoryCard from '@/components/product/CategoryCard.astro'
 import ImprovedCarousel from '@/components/product/ImprovedCarousel'
 import FlashDealsCard from '@/components/product/FlashDealsCard.astro'
 import { audifonos, brandLogos, categories, flashDeals, laptops, Sillas, televisores } from '@/constants/db_product'
-
-
 ---
 
 <Layout>
@@ -93,9 +91,11 @@ import { audifonos, brandLogos, categories, flashDeals, laptops, Sillas, televis
 											<div class="text-sm text-green-600">{laptop.installments}</div>
 										</div>
 										<div class="text-sm text-orange-600">Stock: {laptop.stock} unidades</div>
-										<Button className="bg-primary hover:bg-red-700 text-sm sm:text-base px-4 sm:px-8 py-2 sm:py-3 w-full">
-											Comprar Ahora!
-										</Button>
+										<a href={`/producto/${laptop?.id?.toString()}`}>
+											<Button className="bg-primary hover:bg-red-700 text-sm sm:text-base px-4 sm:px-8 py-2 sm:py-3 w-full">
+												Comprar Ahora!
+											</Button>
+										</a>
 									</div>
 								</CardContent>
 							</Card>
@@ -245,7 +245,7 @@ import { audifonos, brandLogos, categories, flashDeals, laptops, Sillas, televis
 											<div class="text-xs text-green-600">{product.installments}</div>
 										</div>
 										<Button className="bg-primary hover:bg-red-700 text-sm sm:text-base px-4 sm:px-8 py-2 sm:py-3 w-full">
-											Agregar al Carrito
+											<a href={`/producto/${product?.id?.toString()}`}>Ver más detalle</a>
 										</Button>
 									</div>
 								</CardContent>
