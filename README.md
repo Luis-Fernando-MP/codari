@@ -4,9 +4,9 @@
   - CODARI
 </h1>
 
-<div align="center" style="display: flex; gap: 10px; justify-content: center; max-width: 900px; margin: 0 auto;">
-  <img src="./public/background-1.png" alt="Banner 1" style="border-radius: 10px;  width: 50%" />
-  <img src="./public/background-2.png" alt="Banner 2" style="border-radius: 10px; width: 50%" />
+<div  style="display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap;">
+  <img src="./public/background-1.png" alt="Banner 1" style="border-radius: 10px; width: 100%; max-width: 400px; height: auto;" />
+  <img src="./public/background-2.png" alt="Banner 2" style="border-radius: 10px; width: 100%; max-width: 400px; height: auto;" />
 </div>
 
 ## ✨ Descripción
