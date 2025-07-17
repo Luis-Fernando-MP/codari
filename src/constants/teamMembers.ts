@@ -72,7 +72,7 @@ export const teamMembers = [
 		description: 'Director de Producto enfocado en experiencia de usuario, desarrollo frontend y estrategia de producto digital.',
 		image: 'https://i.pinimg.com/736x/0c/06/e3/0c06e3b166347875937fdec9ec44d009.jpg',
 		experience: [
-			'3+ años en desarrollo frontend y UX/UI',
+			'Practicante en desarrollo frontend y backend',
 			'Especialista en diseño de experiencias digitales',
 			'Ex-diseñador de producto en agencias digitales',
 			'Certificado en Design Thinking y Agile'
