@@ -7,60 +7,31 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { relatedProducts } from '@/constants/db_product'
 
 export default function ProductDetailPage({ producto }: any) {
-	const product = {
-		id: producto?.id ?? 'id',
-		name: producto?.name ?? 'name',
-		brand: 'Apple',
-		price: '$1,199',
-		originalPrice: '$1,399',
-		discount: 14,
-		rating: 4.8,
-		reviews: 2847,
-		inStock: true,
-		stockCount: producto?.stock ?? 'stock',
-		sku: 'APL-IP15PM-256-BLU',
-		category: 'Smartphones',
-		images: [producto?.image ?? 'image'],
-		description:
-			'El iPhone 15 Pro Max redefine lo que es posible con un smartphone. Con el revolucionario chip A17 Pro, sistema de cámaras profesional y diseño en titanio, experimenta la innovación en cada detalle.',
-		features: [
-			'Chip A17 Pro con GPU de 6 núcleos',
-			'Sistema de cámaras Pro con teleobjetivo 5x',
-			'Pantalla Super Retina XDR de 6.7 pulgadas',
-			'Diseño resistente en titanio',
-			'Conector USB-C',
-			'Face ID avanzado',
-			'Resistente al agua IP68',
-			'iOS 17 con nuevas funciones'
-		],
-		specifications: {
-			Pantalla: '6.7 pulgadas Super Retina XDR OLED',
-			Procesador: 'Chip A17 Pro',
-			Almacenamiento: '256GB',
-			'Cámara Principal': '48MP con teleobjetivo 5x',
-			'Cámara Frontal': '12MP TrueDepth',
-			Batería: 'Hasta 29 horas de reproducción de video',
-			Conectividad: '5G, Wi-Fi 6E, Bluetooth 5.3',
-			'Sistema Operativo': 'iOS 17',
-			Dimensiones: '159.9 x 76.7 x 8.25 mm',
-			Peso: '221 gramos'
-		},
-		colors: [
-			{ name: 'Titanio Natural', value: 'natural', available: true },
-			{ name: 'Titanio Azul', value: 'blue', available: true },
-			{ name: 'Titanio Blanco', value: 'white', available: true },
-			{ name: 'Titanio Negro', value: 'black', available: false }
-		],
-		storage: [
-			{ size: '128GB', price: '$1,099', available: true },
-			{ size: '256GB', price: '$1,199', available: true, selected: true },
-			{ size: '512GB', price: '$1,399', available: true },
-			{ size: '1TB', price: '$1,599', available: true }
-		],
-		warranty: '1 año de garantía Apple + 6 meses adicionales CODARI',
-		shipping: 'Envío gratis en 24-48 horas',
-		returns: '30 días para devoluciones gratuitas'
-	}
+  const product = {
+    id: producto?.id ?? "id",
+    name: producto?.name ?? "Producto genérico",
+    brand: producto?.brand ?? "Marca genérica",
+    price: producto?.price ?? "$0",
+    originalPrice: producto?.originalPrice ?? "$0",
+    discount: producto?.discount ?? 0,
+    rating: producto?.rating ?? 0,
+    reviews: producto?.reviews ?? 0,
+    inStock: true,
+    stockCount: producto?.stock ?? 0,
+    sku: producto?.sku ?? "SKU-GENERICO",
+    category: producto?.category ?? "Categoría genérica",
+    images: producto?.images ?? [producto?.image ?? "/placeholder.svg"],
+    description: producto?.description ?? "Sin descripción disponible.",
+    features: producto?.features ?? ["Sin características disponibles."],
+    specifications: producto?.specifications ?? {},
+    colors: producto?.colors ?? [
+      { name: "Genérico", value: "#ccc", available: true },
+    ],
+    storage: producto?.storage ?? [],
+    warranty: producto?.warranty ?? "Sin garantía.",
+    shipping: producto?.shipping ?? "Sin información de envío.",
+    returns: producto?.returns ?? "Sin información de devoluciones.",
+  };
 
 	return (
 		<div className="min-h-screen bg-white">
@@ -287,6 +258,31 @@ export default function ProductDetailPage({ producto }: any) {
 								</CardContent>
 							</Card>
 						</TabsContent>
+
+            <TabsContent value="specifications" className="mt-8">
+              <Card>
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-bold mb-6">
+                    Especificaciones Técnicas
+                  </h3>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    {Object.entries(product.specifications).map(
+                      ([key, value], index) => (
+                        <div
+                          key={index}
+                          className="flex justify-between py-3 border-b border-gray-200"
+                        >
+                          <span className="font-semibold text-gray-900">
+                            {key}
+                          </span>
+                          <span className="text-gray-700">{String(value)}</span>
+                        </div>
+                      )
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
+            </TabsContent>
 
 						<TabsContent value="reviews" className="mt-8">
 							<Card>
