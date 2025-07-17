@@ -12,11 +12,11 @@ export default function ProductDetailPage({ producto }: any) {
 		brand: producto?.brand ?? 'Marca genérica',
 		price: producto?.price ?? '$0',
 		originalPrice: producto?.originalPrice ?? '$0',
-		discount: producto?.discount ?? 0,
-		rating: producto?.rating ?? 0,
-		reviews: producto?.reviews ?? 0,
+		discount: producto?.discount ?? 5,
+		rating: producto?.rating ?? 10,
+		reviews: producto?.reviews ?? 100,
 		inStock: true,
-		stockCount: producto?.stock ?? 0,
+		stockCount: producto?.stock ?? 5,
 		sku: producto?.sku ?? 'SKU-GENERICO',
 		category: producto?.category ?? 'Categoría genérica',
 		images: producto?.images ?? [producto?.image ?? '/logo.svg'],
@@ -373,7 +373,7 @@ export default function ProductDetailPage({ producto }: any) {
 
 				{/* Related Products */}
 				<div className="mt-16">
-					<h2 className="text-3xl font-bold mb-8">Productos Relacionados</h2>
+					<h2 className="text-3xl font-bold mb-8">Otros productos que pueden interesarte</h2>
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 						{relatedProducts.map((product, index) => (
 							<Card key={index} className="group hover:shadow-lg transition-all duration-300">
@@ -391,7 +391,7 @@ export default function ProductDetailPage({ producto }: any) {
 									<div className="flex items-center space-x-1 mb-2">
 										{[...Array(5)].map((_, i) => (
 											<Star
-												key={i}
+												key={i + 'relacionados'}
 												className={`w-3 h-3 ${
 													i < Math.floor(product?.rating) ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'
 												}`}
@@ -403,11 +403,9 @@ export default function ProductDetailPage({ producto }: any) {
 										<span className="text-lg font-bold text-orange-600">{product?.price}</span>
 										<span className="text-sm text-gray-500 line-through">{product?.originalPrice}</span>
 									</div>
-									<Button className="w-full bg-orange-600 hover:bg-orange-700">
-										<a href={`/producto/${producto?.id?.toString()}`} className="block w-full text-white">
-											Ver Producto
-										</a>
-									</Button>
+									<a href={`/producto/${product?.id}`}>
+										<Button className="w-full bg-orange-600 hover:bg-orange-700">Ver Producto</Button>
+									</a>
 								</CardContent>
 							</Card>
 						))}
