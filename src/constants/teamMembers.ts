@@ -70,7 +70,7 @@ export const teamMembers = [
 		name: 'Alfaro Muñoz, Anderson',
 		role: 'CPO & Frontend Developer',
 		description: 'Director de Producto enfocado en experiencia de usuario, desarrollo frontend y estrategia de producto digital.',
-		image: '/logo.svg?height=128&width=128',
+		image: 'https://i.pinimg.com/736x/0c/06/e3/0c06e3b166347875937fdec9ec44d009.jpg',
 		experience: [
 			'3+ años en desarrollo frontend y UX/UI',
 			'Especialista en diseño de experiencias digitales',
